@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Metadata -->
+    <title>Yiheyis Tamir — Software Engineer | Mobile (Flutter) &amp; Backend (Go, Django)</title>
+    <meta name="title" content="Yiheyis Tamir — Software Engineer | Mobile (Flutter) &amp; Backend (Go, Django)">
+    <meta name="description" content="Software Engineer and AASTU honor graduate specializing in production Flutter mobile apps, Go &amp; Django backend systems, REST APIs, and AI RAG architectures. 7+ shipped products.">
+    <meta name="author" content="Yiheyis Tamir Ayalew">
+    <meta name="keywords" content="Yiheyis Tamir, Software Engineer, Flutter, Go, Golang, Django, Python, REST APIs, RAG, AI, Backend Engineer, Mobile Developer, Addis Ababa, Ethiopia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yiheyis-tamir.tech/">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yiheyis-tamir.tech/">
+    <meta property="og:title" content="Yiheyis Tamir — Software Engineer">
+    <meta property="og:description" content="I build production-ready mobile apps and backend systems. Flutter, Go, Django, and AI-powered products.">
+    <meta property="og:image" content="https://yiheyis-tamir.tech/images/p1.jpg">
+    <meta property="og:site_name" content="Yiheyis Tamir Portfolio">
+    
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yiheyis-tamir.tech/">
+    <meta property="twitter:title" content="Yiheyis Tamir — Software Engineer">
+    <meta property="twitter:description" content="I build production-ready mobile apps and backend systems. Flutter, Go, Django, and AI-powered products.">
+    <meta property="twitter:image" content="https://yiheyis-tamir.tech/images/p1.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Theme & Progressive Enhancement Bootstrap -->
+    <script>
+      document.documentElement.classList.add('js');
+      (function() {
+        try {
+          const urlTheme = new URLSearchParams(window.location.search).get('theme');
+          const saved = (urlTheme === 'light' || urlTheme === 'dark') ? urlTheme : localStorage.getItem('portfolio-theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = saved ? saved : (prefersDark ? 'dark' : 'dark');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+<body>
+    <!-- Ambient Cursor Glow Spotlight -->
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Top Reading / Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    
+    <!-- ═══════════════════════════════════════════════════
+         01. FLOATING COMPACT NAVIGATION BAR
+    ═══════════════════════════════════════════════════ -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#home" class="logo" aria-label="Yiheyis Tamir — Home">
+                <span class="logo-bracket">&lt;</span>YT<span class="logo-dot">.</span><span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <nav class="navbar" id="navbar" aria-label="Primary portfolio navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#achievements" class="nav-link">Honors</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+                    <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="/Yiheyis-Tamir-Ayalew-Resume.pdf" download="Yiheyis-Tamir-Ayalew-Resume.pdf" class="btn btn-sm btn-outline header-resume-btn" aria-label="Download Résumé PDF">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    <span>Résumé</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation Drawer Backdrop -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    
+    <main id="main-content">
+        <!-- ═══════════════════════════════════════════════════
+             02. HERO SECTION
+        ═══════════════════════════════════════════════════ -->
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <!-- Cybernetic System Status Line (Peter Parker Inspired) -->
+                    <div class="hero-status-line" data-reveal>
+                        <span class="status-accent-pipe">|</span>
+                        <span class="status-meta">SYSTEM STATUS:</span>
+                        <span class="status-badge-text">
+                            <span class="badge-dot"></span>
+                            AVAILABLE FOR ENGINEERING ROLES
+                        </span>
+                        <span class="status-divider-line" aria-hidden="true"></span>
+                    </div>
+                    
+                    <!-- Massive Two-Tone Name Display (Solid Top + Outlined Bottom) -->
+                    <h1 class="hero-name-block" data-reveal data-reveal-delay="60">
+                        <span class="hero-name-solid">YIHEYIS</span>
+                        <span class="hero-name-outline">TAMIR</span>
+                    </h1>
+                    
+                    <div class="hero-accent-bar" data-reveal data-reveal-delay="100" aria-hidden="true"></div>
+                    
+                    <!-- Architectural Role Definition -->
+                    <div class="hero-role-label" data-reveal data-reveal-delay="140">
+                        <span class="mono">// ROLE_DEFINITION &amp; ARCHITECTURE</span>
+                    </div>
+
+                    <div class="hero-tagline" data-reveal data-reveal-delay="180">
+                        I build <span class="hero-nowrap">production-ready</span> mobile apps &amp; backend systems.
+                    </div>
+                    
+                    <div class="hero-subtitle" data-reveal data-reveal-delay="220">
+                        <span class="mono text-tertiary">$ role --current</span>
+                        <span id="typing-text" class="typing-text">Backend Systems Architect</span>
+                        <span class="typing-cursor"></span>
+                    </div>
+                    
+                    <p class="hero-bio" data-reveal data-reveal-delay="260">
+                        Honor graduate of AASTU. Experienced in delivering full-stack products with Flutter mobile clients, Go &amp; Django REST backends, event-driven microservices, and practical RAG AI pipelines.
+                    </p>
+                    
+                    <div class="hero-actions" data-reveal data-reveal-delay="340">
+                        <a href="#work" class="btn btn-primary">
+                            Explore Featured Work
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </a>
+                        <a href="/Yiheyis-Tamir-Ayalew-Resume.pdf" download="Yiheyis-Tamir-Ayalew-Resume.pdf" class="btn btn-outline">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Download Résumé
+                        </a>
+                        <div class="hero-social-divider" aria-hidden="true"></div>
+                        <div class="hero-social-strip">
+                            <a href="https://github.com/Yiheyistm" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub Profile">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </a>
+                            <a href="https://linkedin.com/in/yiheyis-tamir-b56aa8300" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn Profile">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+                            <a href="https://t.me/Abetobr" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="Telegram Channel">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            </a>
+                            <a href="mailto:yiheyisyt23@gmail.com" class="hero-social-link" aria-label="Email Yiheyis Tamir">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Verified Engineering Stats -->
+                    <div class="hero-metrics" data-reveal data-reveal-delay="420">
+                        <div class="metric-card">
+                            <div class="metric-number"><span data-counter>600</span>+</div>
+                            <div class="metric-label">DSA Problems Solved</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number"><span data-counter>7</span>+</div>
+                            <div class="metric-label">Shipped Client Products</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number"><span data-counter data-decimal="2">3.86</span></div>
+                            <div class="metric-label">CGPA / 4.0 · AASTU Honor</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Visual: Live System Architecture & Telemetry Console -->
+                <div class="hero-visual" data-reveal data-reveal-delay="200">
+                    <div class="telemetry-console">
+                        <div class="console-topbar">
+                            <div class="console-dots">
+                                <span class="console-dot red"></span>
+                                <span class="console-dot yellow"></span>
+                                <span class="console-dot green"></span>
+                            </div>
+                            <div class="console-tabs" role="tablist" aria-label="Console views">
+                                <button type="button" class="console-tab active" data-tab="topology" role="tab" aria-selected="true">topology.yaml</button>
+                                <button type="button" class="console-tab" data-tab="engineer" role="tab" aria-selected="false">engineer.go</button>
+                                <button type="button" class="console-tab" data-tab="telemetry" role="tab" aria-selected="false">telemetry.sh</button>
+                            </div>
+                            <span class="console-live-badge">
+                                <span class="pulse-dot-green"></span> LIVE
+                            </span>
+                        </div>
+                        
+                        <div class="console-body">
+                            <!-- Panel 1: Topology Architecture Flow -->
+                            <div class="console-panel active" id="panel-topology" role="tabpanel">
+                                <div class="arch-flow">
+                                    <!-- Node 1: Client Layer -->
+                                    <div class="arch-node">
+                                        <div class="arch-node-left">
+                                            <span class="arch-node-icon">📱</span>
+                                            <div>
+                                                <div class="arch-node-name">Client Application Layer</div>
+                                                <div class="arch-node-tech">Flutter · Dart · iOS / Android</div>
+                                            </div>
+                                        </div>
+                                        <span class="arch-node-status">60 FPS Sync</span>
+                                    </div>
+                                    
+                                    <!-- Node 2: Gateway Layer -->
+                                    <div class="arch-node">
+                                        <div class="arch-node-left">
+                                            <span class="arch-node-icon">⚡</span>
+                                            <div>
+                                                <div class="arch-node-name">High-Concurrency API Gateway</div>
+                                                <div class="arch-node-tech">Go (Golang) · Gin · JWT Auth</div>
+                                            </div>
+                                        </div>
+                                        <span class="arch-node-status">18ms p99</span>
+                                    </div>
+                                    
+                                    <!-- Node 3: Messaging Layer -->
+                                    <div class="arch-node">
+                                        <div class="arch-node-left">
+                                            <span class="arch-node-icon">🐇</span>
+                                            <div>
+                                                <div class="arch-node-name">Asynchronous Event Exchange</div>
+                                                <div class="arch-node-tech">RabbitMQ · Message Queuing · Idempotency</div>
+                                            </div>
+                                        </div>
+                                        <span class="arch-node-status">0 Drops</span>
+                                    </div>
+                                    
+                                    <!-- Node 4: Core Services & AI -->
+                                    <div class="arch-node">
+                                        <div class="arch-node-left">
+                                            <span class="arch-node-icon">🧠</span>
+                                            <div>
+                                                <div class="arch-node-name">Transactional Core &amp; AI Vector DB</div>
+                                                <div class="arch-node-tech">Django REST · PostgreSQL · RAG Pipeline</div>
+                                            </div>
+                                        </div>
+                                        <span class="arch-node-status">ACID Strict</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Real-time Telemetry Bar -->
+                                <div class="console-telemetry">
+                                    <div class="telemetry-item">
+                                        <div class="telemetry-label">Cluster Uptime</div>
+                                        <div class="telemetry-val">99.98%</div>
+                                    </div>
+                                    <div class="telemetry-item">
+                                        <div class="telemetry-label">Mean Latency</div>
+                                        <div class="telemetry-val">24.2 ms</div>
+                                    </div>
+                                    <div class="telemetry-item">
+                                        <div class="telemetry-label">Ledger Discrepancy</div>
+                                        <div class="telemetry-val telemetry-val-success">0.00%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Panel 2: engineer.go Code View -->
+                            <div class="console-panel" id="panel-engineer" role="tabpanel" style="display: none;">
+                                <pre class="console-code"><code><span class="c-kw">package</span> <span class="c-pkg">main</span>
+
+<span class="c-kw">type</span> <span class="c-typ">Engineer</span> <span class="c-kw">struct</span> {
+    Name     <span class="c-typ">string</span>
+    Degree   <span class="c-typ">string</span>
+    CGPA     <span class="c-typ">float64</span>
+    Roles    []<span class="c-typ">string</span>
+    Primary  []<span class="c-typ">string</span>
+}
+
+<span class="c-kw">func</span> <span class="c-fn">NewEngineer</span>() *<span class="c-typ">Engineer</span> {
+    <span class="c-kw">return</span> &amp;<span class="c-typ">Engineer</span>{
+        Name:    <span class="c-str">"Yiheyis Tamir Ayalew"</span>,
+        Degree:  <span class="c-str">"B.Sc. Software Engineering (AASTU)"</span>,
+        Roles:   []<span class="c-typ">string</span>{<span class="c-str">"Mobile (Flutter)"</span>, <span class="c-str">"Backend (Go/Django)"</span>, <span class="c-str">"AI/RAG"</span>},
+        Primary: []<span class="c-typ">string</span>{<span class="c-str">"Go"</span>, <span class="c-str">"Dart"</span>, <span class="c-str">"Python"</span>, <span class="c-str">"PostgreSQL"</span>, <span class="c-str">"Docker"</span>},
+    }
+}</code></pre>
+                            </div>
+                            
+                            <!-- Panel 3: telemetry.sh Live Health Terminal -->
+                            <div class="console-panel" id="panel-telemetry" role="tabpanel" style="display: none;">
+                                <div class="terminal-view">
+                                    <div class="terminal-cmd"><span class="terminal-prompt">$</span> curl -s https://api.yiheyis-tamir.tech/v1/healthz</div>
+                                    <pre class="terminal-output"><code>{
+  <span class="c-key">"status"</span>: <span class="c-str">"HEALTHY"</span>,
+  <span class="c-key">"uptime"</span>: <span class="c-str">"99.98%"</span>,
+  <span class="c-key">"latency_p99"</span>: <span class="c-str">"18.4ms"</span>,
+  <span class="c-key">"services"</span>: {
+    <span class="c-key">"api_gateway"</span>: <span class="c-str">"ONLINE (Go/Gin)"</span>,
+    <span class="c-key">"event_bus"</span>: <span class="c-str">"RUNNING (RabbitMQ)"</span>,
+    <span class="c-key">"database"</span>: <span class="c-str">"SYNC (PostgreSQL)"</span>,
+    <span class="c-key">"rag_pipeline"</span>: <span class="c-str">"READY (FastAPI + Embeddings)"</span>
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ═══════════════════════════════════════════════════
+             03. FEATURED PROJECTS: ASYMMETRIC PRODUCT LAUNCHES
+        ═══════════════════════════════════════════════════ -->
+        <section id="work" class="projects section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="section-tag mono">// product launches</span>
+                    <h2 class="section-title">Engineered Products &amp; Systems</h2>
+                    <p class="section-desc">Real products built for scale, performance, and real-world clients. Click any project to open the 11-point architectural case study.</p>
+                </div>
+                
+                <!-- Category Filter Buttons -->
+                <div id="filter-btns" class="project-filters" data-reveal></div>
+                
+                <!-- Projects Showcase Container -->
+                <div class="projects-container">
+                    
+                    <!-- ───────────────────────────────────────────
+                         FLAGSHIP 1: BAYMENT (Wide Hero Card with Smartphone Frame)
+                         ─────────────────────────────────────────── -->
+                    <article class="spotlight-card" data-category="mobile" data-id="bayment" data-reveal>
+                        <div class="spotlight-content">
+                            <div class="spotlight-header">
+                                <div class="spotlight-badge-row">
+                                    <span class="badge-pill badge-pill-live">
+                                        <span class="badge-dot"></span> Production Google Play Release
+                                    </span>
+                                    <span class="tag-pill">FinTech</span>
+                                    <span class="tag-pill">Proprietary / Client NDA</span>
+                                </div>
+                                <h3 class="spotlight-title">Bayment — FinTech Virtual Card &amp; P2P Platform</h3>
+                                <div class="spotlight-subtitle">Lead Full-Stack Engineer · Flutter Mobile + Django REST Backend</div>
+                                <p class="spotlight-desc">
+                                    Full-stack financial technology platform engineered to eliminate international payment friction for African consumers. Combines programmatic Mastercard virtual card issuance, dynamic card freezing, sub-second P2P wallet settlement, and African bank gateway integrations.
+                                </p>
+                            </div>
+                            
+                            <div class="spotlight-highlights">
+                                <div class="spotlight-hl-item">Programmatic virtual card creation with tokenized CVV and dynamic spend caps.</div>
+                                <div class="spotlight-hl-item">Double-entry accounting ledger with sub-second P2P fund transfers.</div>
+                                <div class="spotlight-hl-item">60 FPS cross-platform Flutter client with biometric security &amp; balance telemetry.</div>
+                            </div>
+                            
+                            <div class="spotlight-tags">
+                                <span class="tag-pill">Flutter</span>
+                                <span class="tag-pill">Dart</span>
+                                <span class="tag-pill">Python</span>
+                                <span class="tag-pill">Django REST Framework</span>
+                                <span class="tag-pill">PostgreSQL</span>
+                                <span class="tag-pill">Docker</span>
+                                <span class="tag-pill">Google Play API</span>
+                            </div>
+                            
+                            <div class="spotlight-actions">
+                                <a href="project-detail.html?id=bayment" class="btn btn-primary">
+                                    Explore Engineering Case Study →
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=me.bayment.app" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                    Google Play Store ↗
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Right: Realistic Smartphone Mockup -->
+                        <div class="spotlight-visual-area">
+                            <div class="phone-toggle-row">
+                                <button type="button" class="btn btn-sm btn-primary phone-tab-btn active" onclick="window.switchPhoneScreen(this, 'bayment-phone-screen', '/images/projects/bayment-home.jpg')">
+                                    Home
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline phone-tab-btn" onclick="window.switchPhoneScreen(this, 'bayment-phone-screen', '/images/projects/bayment-card.jpg')">
+                                    Card
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline phone-tab-btn" onclick="window.switchPhoneScreen(this, 'bayment-phone-screen', '/images/projects/bayment-setting.jpg')">
+                                    Settings
+                                </button>
+                            </div>
+                            <div class="phone-mockup">
+                                <div class="phone-notch"></div>
+                                <img id="bayment-phone-screen" src="/images/projects/bayment-home.jpg" alt="Bayment mobile app interface" class="phone-screen" loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- ───────────────────────────────────────────
+                         FLAGSHIP 2: MEHALEQ (AI Amharic Conversational Assistant)
+                         ─────────────────────────────────────────── -->
+                    <article class="mehaleq-card" data-category="ai" data-id="mehaleq" data-reveal>
+                        <!-- Left: Live RAG Application Browser Frame -->
+                        <div class="ai-chat-preview" style="padding: 0; display: flex; flex-direction: column;">
+                            <div class="mehaleq-browser-frame">
+                                <div class="mehaleq-browser-bar">
+                                    <div class="mehaleq-browser-header">
+                                        <div class="mehaleq-browser-dots">
+                                            <span class="code-dot red"></span>
+                                            <span class="code-dot yellow"></span>
+                                            <span class="code-dot green"></span>
+                                        </div>
+                                        <div class="mehaleq-browser-url">mehaleq.tech · RAG v2</div>
+                                    </div>
+                                    <div class="mehaleq-tab-group">
+                                        <button type="button" class="btn btn-sm btn-primary mehaleq-tab-btn active" onclick="window.switchScreen(this, 'mehaleq-screen', '/images/projects/mehaleq_1.png')">
+                                            Cited Q&amp;A
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline mehaleq-tab-btn" onclick="window.switchScreen(this, 'mehaleq-screen', '/images/projects/mehaleq.png')">
+                                            Topic Portal
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mehaleq-screen-container">
+                                    <img id="mehaleq-screen" src="/images/projects/mehaleq_1.png" alt="Mehaleq Ethiopian Capital Market RAG Interface" class="mehaleq-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right: Product Breakdown -->
+                        <div class="spotlight-content">
+                            <div class="spotlight-header">
+                                <div class="spotlight-badge-row">
+                                    <span class="badge-pill badge-pill-live">
+                                        <span class="badge-dot"></span> Specialized AI Architecture
+                                    </span>
+                                    <span class="tag-pill">AI / RAG</span>
+                                    <span class="tag-pill">Amharic NLP</span>
+                                </div>
+                                <h3 class="spotlight-title">Mehaleq — AI Amharic Conversational Assistant</h3>
+                                <div class="spotlight-subtitle">AI &amp; Backend Engineer · Retrieval-Augmented Generation (RAG)</div>
+                                <p class="spotlight-desc">
+                                    Overcomes severe token fragmentation and hallucination rates in low-resource Ethiopic (Ge'ez) script. Built with morphological text normalizers, hybrid vector embeddings, and domain-grounded context reranking.
+                                </p>
+                            </div>
+                            
+                            <div class="spotlight-highlights">
+                                <div class="spotlight-hl-item">Custom Ge'ez script transliteration normalizer eliminating character variant drift.</div>
+                                <div class="spotlight-hl-item">Hybrid retrieval (Dense Vector + BM25 sparse matching) with reranker verification.</div>
+                                <div class="spotlight-hl-item">FastAPI streaming backend delivering sub-200ms perceived response latency.</div>
+                            </div>
+                            
+                            <div class="spotlight-tags">
+                                <span class="tag-pill">Python</span>
+                                <span class="tag-pill">RAG</span>
+                                <span class="tag-pill">FastAPI</span>
+                                <span class="tag-pill">Vector Embeddings</span>
+                                <span class="tag-pill">Amharic NLP</span>
+                                <span class="tag-pill">LLM Grounding</span>
+                            </div>
+                            
+                            <div class="spotlight-actions">
+                                <a href="project-detail.html?id=mehaleq" class="btn btn-primary">
+                                    Explore Engineering Case Study →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- ───────────────────────────────────────────
+                         SECONDARY PROJECTS GRID (Distinct Architectural Presentations)
+                         ─────────────────────────────────────────── -->
+                    <div class="secondary-projects-grid" id="secondary-projects">
+                        <!-- Rendered by main.js -->
+                    </div>
+                    
+                    <!-- ───────────────────────────────────────────
+                         04. ENGINEERING ARCHIVE (6 Systems & Prototypes)
+                         ─────────────────────────────────────────── -->
+                    <div class="engineering-archive-section" id="engineering-archive" data-reveal>
+                        <div class="archive-header-card">
+                            <div class="archive-header-text">
+                                <span class="section-tag mono">// archival systems &amp; proofs-of-concept</span>
+                                <h3 class="archive-title">Engineering Archive</h3>
+                                <p class="archive-desc">Additional distributed microservices, machine learning models, and IoT embedded hardware projects.</p>
+                            </div>
+                            <button type="button" class="btn btn-outline" id="toggle-archive-btn" aria-expanded="false" aria-controls="archive-grid">
+                                Browse Engineering Archive (7 Systems) ↓
+                            </button>
+                        </div>
+                        <div class="archive-grid" id="archive-grid">
+                            <!-- Rendered dynamically by main.js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ═══════════════════════════════════════════════════
+             04. ABOUT SECTION
+        ═══════════════════════════════════════════════════ -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="section-tag mono">// about</span>
+                    <h2 class="section-title">The Engineer Behind the Code</h2>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-photo-wrapper" data-reveal>
+                        <div class="about-photo-frame">
+                            <img src="/images/p1.jpg" alt="Yiheyis Tamir Ayalew — Software Engineer" class="about-photo-img" loading="lazy" width="360" height="440">
+                        </div>
+                        <div class="about-experience-badge">
+                            <div class="about-badge-icon">⚡</div>
+                            <div>
+                                <div class="about-badge-val">7+ Shipped Products</div>
+                                <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; color: var(--text-tertiary);">Production Work</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-text-col" data-reveal data-reveal-delay="150">
+                        <p style="font-size: 1.15rem; line-height: 1.7; color: var(--text-primary); margin-bottom: 18px;">
+                            I am a Software Engineer and honor graduate of <strong>Addis Ababa Science and Technology University (AASTU)</strong>, specializing in cross-platform mobile engineering and scalable backend infrastructure.
+                        </p>
+                        <p style="font-size: 1.02rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 18px;">
+                            My technical sweet spot is building seamless, native-performance applications in <strong>Flutter</strong> and backing them with high-throughput distributed systems in <strong>Go</strong> and <strong>Python/Django</strong>. I prioritize Clean Architecture, type safety, test isolation, and dependable production performance.
+                        </p>
+                        <p style="font-size: 1.02rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 28px;">
+                            Selected for <strong>A2SV (Africa to Silicon Valley)</strong>, an elite engineering talent program backed by Google, where I completed rigorous algorithmic acceleration and solved <strong>600+ complex problems</strong> across LeetCode and Codeforces.
+                        </p>
+                        
+                        <div class="about-competence-grid">
+                            <div class="about-competence-card">
+                                <div class="about-competence-label">Languages</div>
+                                <div class="about-competence-val">Go · Dart · Python · C++ · SQL</div>
+                            </div>
+                            <div class="about-competence-card">
+                                <div class="about-competence-label">Frameworks</div>
+                                <div class="about-competence-val">Flutter · Gin · Django · FastAPI</div>
+                            </div>
+                            <div class="about-competence-card">
+                                <div class="about-competence-label">Databases &amp; Queues</div>
+                                <div class="about-competence-val">PostgreSQL · RabbitMQ · Docker</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ═══════════════════════════════════════════════════
+             05. EXPERIENCE TIMELINE
+        ═══════════════════════════════════════════════════ -->
+        <section id="experience" class="experience section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="section-tag mono">// career &amp; acceleration</span>
+                    <h2 class="section-title">Verified Engineering Experience</h2>
+                    <p class="section-desc">Documented production contributions, elite Google acceleration, and university honors.</p>
+                </div>
+                
+                <div class="timeline">
+                    <!-- 1. Eskalate LLC -->
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Software Engineering Intern</h3>
+                                    <a href="https://eskalate.io" target="_blank" rel="noopener noreferrer" class="timeline-company">
+                                        Eskalate LLC ↗
+                                    </a>
+                                </div>
+                                <div class="timeline-period">Jul 2025 – Sep 2025 · Addis Ababa</div>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li class="timeline-bullet">Built <strong>30+ REST API endpoints in Go with Gin</strong> for a high-traffic publishing platform with AI recommendation algorithms.</li>
+                                <li class="timeline-bullet">Engineered <strong>65+ Go backend APIs</strong> connecting Flutter mobile and React clients for the MenuMate restaurant platform.</li>
+                                <li class="timeline-bullet">Applied <strong>Clean Architecture</strong> across multi-layered services to guarantee strict domain isolation and mock unit test coverage.</li>
+                                <li class="timeline-bullet">Introduced <strong>OCR computer vision scanning</strong> to digitize physical paper menus into structured, searchable digital databases.</li>
+                            </ul>
+                            <div class="skill-list">
+                                <span class="skill-item">Go</span>
+                                <span class="skill-item">Gin</span>
+                                <span class="skill-item">Flutter</span>
+                                <span class="skill-item">Clean Architecture</span>
+                                <span class="skill-item">OCR</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2. A2SV -->
+                    <div class="timeline-item" data-reveal data-reveal-delay="100">
+                        <div class="timeline-dot" style="border-color: var(--accent-indigo);"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Member — Google-Backed Program</h3>
+                                    <a href="https://www.linkedin.com/company/a2sv/" target="_blank" rel="noopener noreferrer" class="timeline-company">
+                                        A2SV (Africa to Silicon Valley) ↗
+                                    </a>
+                                </div>
+                                <div class="timeline-period">Jan 2025 – Nov 2025 · Addis Ababa</div>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li class="timeline-bullet">Selected for the premier, Google-backed engineering acceleration program admitting top African software engineers.</li>
+                                <li class="timeline-bullet">Mastered advanced data structures &amp; algorithms: <strong>graphs, trees, dynamic programming, and memoization</strong>.</li>
+                                <li class="timeline-bullet">Solved <strong>600+ LeetCode and Codeforces problems</strong> to reach expert-level algorithmic efficiency and asymptotic optimization.</li>
+                            </ul>
+                            <div class="skill-list">
+                                <span class="skill-item">DSA &amp; Algorithms</span>
+                                <span class="skill-item">Dynamic Programming</span>
+                                <span class="skill-item">Graph Theory</span>
+                                <span class="skill-item">Google Mentorship</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 3. AASTU -->
+                    <div class="timeline-item" data-reveal data-reveal-delay="200">
+                        <div class="timeline-dot" style="border-color: var(--accent-cyan);"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">B.Sc. in Software Engineering</h3>
+                                    <a href="https://www.aastu.edu.et/" target="_blank" rel="noopener noreferrer" class="timeline-company">
+                                        Addis Ababa Science &amp; Technology University (AASTU) ↗
+                                    </a>
+                                </div>
+                                <div class="timeline-period">May 2022 – Jun 2026 · Addis Ababa</div>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li class="timeline-bullet"><strong>CGPA: 3.86 / 4.0</strong> — Honor Graduate standing.</li>
+                                <li class="timeline-bullet">Core coursework: Distributed Systems, Database Management Systems, OOP, Computer Architecture, System Design.</li>
+                                <li class="timeline-bullet">Concurrently shipped 7+ production systems in Flutter, Go, and Django alongside formal university education.</li>
+                            </ul>
+                            <div class="skill-list">
+                                <span class="skill-item">Software Engineering</span>
+                                <span class="skill-item">CGPA 3.86 / 4.0</span>
+                                <span class="skill-item">Honor Graduate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ═══════════════════════════════════════════════════
+             06. SKILLS MATRIX
+        ═══════════════════════════════════════════════════ -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="section-tag mono">// capabilities</span>
+                    <h2 class="section-title">Technical Competence</h2>
+                    <p class="section-desc">Production technologies, tools, and practices backed by shipped systems.</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-card" data-reveal>
+                        <div class="skill-card-header">
+                            <div class="skill-icon">📱</div>
+                            <h3 class="skill-card-title">Mobile Engineering</h3>
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">Flutter</span>
+                            <span class="skill-item">Dart</span>
+                            <span class="skill-item">Android &amp; iOS</span>
+                            <span class="skill-item">State Management</span>
+                            <span class="skill-item">Offline Persistence</span>
+                            <span class="skill-item">Biometric Security</span>
+                            <span class="skill-item">Google Maps SDK</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-reveal data-reveal-delay="100">
+                        <div class="skill-card-header">
+                            <div class="skill-icon">⚙️</div>
+                            <h3 class="skill-card-title">Backend &amp; Distributed APIs</h3>
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">Go (Golang)</span>
+                            <span class="skill-item">Gin Framework</span>
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">Django REST</span>
+                            <span class="skill-item">FastAPI</span>
+                            <span class="skill-item">RESTful Design</span>
+                            <span class="skill-item">JWT Authentication</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-reveal data-reveal-delay="200">
+                        <div class="skill-card-header">
+                            <div class="skill-icon">🗄️</div>
+                            <h3 class="skill-card-title">Data &amp; Infrastructure</h3>
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">TimescaleDB</span>
+                            <span class="skill-item">MongoDB</span>
+                            <span class="skill-item">RabbitMQ</span>
+                            <span class="skill-item">Docker &amp; Compose</span>
+                            <span class="skill-item">Linux Systems</span>
+                            <span class="skill-item">CI/CD Pipelines</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-reveal data-reveal-delay="300">
+                        <div class="skill-card-header">
+                            <div class="skill-icon">🤖</div>
+                            <h3 class="skill-card-title">AI &amp; Practical RAG</h3>
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">RAG Architectures</span>
+                            <span class="skill-item">Vector Embeddings</span>
+                            <span class="skill-item">LLM Context Grounding</span>
+                            <span class="skill-item">Amharic NLP Tools</span>
+                            <span class="skill-item">Scikit-learn</span>
+                            <span class="skill-item">OCR Computer Vision</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-reveal data-reveal-delay="400">
+                        <div class="skill-card-header">
+                            <div class="skill-icon">🧩</div>
+                            <h3 class="skill-card-title">Engineering Discipline</h3>
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">Clean Architecture</span>
+                            <span class="skill-item">Microservices</span>
+                            <span class="skill-item">Interface Mocking</span>
+                            <span class="skill-item">Unit &amp; Integration Testing</span>
+                            <span class="skill-item">Idempotent APIs</span>
+                            <span class="skill-item">Event-Driven Design</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-reveal data-reveal-delay="500">
+                        <div class="skill-card-header">
+                            <div class="skill-icon">🧠</div>
+                            <h3 class="skill-card-title">Algorithmic Problem Solving</h3>
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">600+ Solved (LeetCode/Codeforces)</span>
+                            <span class="skill-item">Dynamic Programming</span>
+                            <span class="skill-item">Graph Traversals (BFS/DFS)</span>
+                            <span class="skill-item">Tree Structures</span>
+                            <span class="skill-item">Asymptotic Complexity O(N)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ═══════════════════════════════════════════════════
+             07. HONORS & ACHIEVEMENTS
+        ═══════════════════════════════════════════════════ -->
+        <section id="achievements" class="achievements section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="section-tag mono">// recognition</span>
+                    <h2 class="section-title">Milestones &amp; Honors</h2>
+                </div>
+                
+                <div class="achievements-grid">
+                    <div class="achievement-card" data-reveal>
+                        <div>
+                            <div class="achievement-icon">🏆</div>
+                            <h3 class="achievement-title">Hackatom — 2nd Place</h3>
+                            <div class="achievement-subtitle">International Hackathon · Russian University</div>
+                            <p class="achievement-desc">Built a Flutter mobile app and web platform promoting nuclear energy awareness, competing and placing 2nd among international teams.</p>
+                        </div>
+                        <div class="cert-card-preview" onclick="window.openCertificate()" title="Click to view verified certificate">
+                            <img src="/images/certificate-1.png" alt="Google Developer Student Clubs Certificate Preview" loading="lazy">
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline" style="margin-top: 14px; width: 100%;" onclick="window.openCertificate()">
+                            View Official Certificate ↗
+                        </button>
+                    </div>
+                    
+                    <div class="achievement-card" data-reveal data-reveal-delay="100">
+                        <div>
+                            <div class="achievement-icon">💻</div>
+                            <h3 class="achievement-title">600+ Competitive Problems</h3>
+                            <div class="achievement-subtitle">LeetCode &amp; Codeforces</div>
+                            <p class="achievement-desc">Demonstrated algorithmic mastery across dynamic programming, graph traversal, and tree manipulation through rigorous continuous practice.</p>
+                        </div>
+                        <div style="display: flex; gap: 14px;">
+                            <a href="https://codeforces.com/profile/yiheyisyt23" target="_blank" rel="noopener noreferrer" class="achievement-link">Codeforces ↗</a>
+                            <a href="https://leetcode.com/u/Tikursew/" target="_blank" rel="noopener noreferrer" class="achievement-link">LeetCode ↗</a>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card" data-reveal data-reveal-delay="200">
+                        <div>
+                            <div class="achievement-icon">📱</div>
+                            <h3 class="achievement-title">Live Play Store App</h3>
+                            <div class="achievement-subtitle">Bayment FinTech Virtual Card Platform</div>
+                            <p class="achievement-desc">Engineered and shipped a production FinTech app to Google Play handling live card issuance, state controls, and peer-to-peer ledger payments.</p>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=me.bayment.app" target="_blank" rel="noopener noreferrer" class="achievement-link">
+                            View on Google Play ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ═══════════════════════════════════════════════════
+             08. CONTACT SECTION
+        ═══════════════════════════════════════════════════ -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="section-tag mono">// get in touch</span>
+                    <h2 class="section-title">Let's Build Something High-Impact</h2>
+                    <p class="section-desc">Open to full-time software engineering roles, high-impact contract projects, and technical collaborations.</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <!-- Left: Direct Info Card -->
+                    <div class="contact-info-card" data-reveal>
+                        <h3 class="contact-card-title">Direct Inquiries</h3>
+                        <p class="contact-card-desc">
+                            Reach out directly via email, phone, or Telegram. I am ready to discuss engineering roles, system architecture, or product builds.
+                        </p>
+                        
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">📧</div>
+                                <div class="contact-detail-meta">
+                                    <span class="contact-detail-label">Email</span>
+                                    <a href="mailto:yiheyisyt23@gmail.com" class="contact-detail-val">yiheyisyt23@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">📱</div>
+                                <div class="contact-detail-meta">
+                                    <span class="contact-detail-label">Phone</span>
+                                    <a href="tel:+251923895809" class="contact-detail-val">+251 923 895 809</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">✈️</div>
+                                <div class="contact-detail-meta">
+                                    <span class="contact-detail-label">Telegram</span>
+                                    <a href="https://t.me/Abetobr" target="_blank" rel="noopener noreferrer" class="contact-detail-val">@Abetobr</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">📍</div>
+                                <div class="contact-detail-meta">
+                                    <span class="contact-detail-label">Location</span>
+                                    <span class="contact-detail-val">Addis Ababa, Ethiopia · Remote OK</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-social-links">
+                            <a href="https://github.com/Yiheyistm" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="GitHub Profile">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </a>
+                            <a href="https://linkedin.com/in/yiheyis-tamir-b56aa8300" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="LinkedIn Profile">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                            <a href="https://t.me/Abetobr" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="Telegram Channel">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Minimal Dark Formspree Form -->
+                    <div class="contact-form-card" data-reveal data-reveal-delay="150">
+                        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mldednpz" method="POST" novalidate>
+                            <div class="form-group">
+                                <label class="form-label" for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Sarah Jenkins" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. sarah@company.com" required autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">Project or Role Details</label>
+                                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your product requirements, engineering role, or technical challenge..." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="form-submit" style="width: 100%; justify-content: center;">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" hidden>Delivering...</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <line x1="22" y1="2" x2="11" y2="13"/>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                </svg>
+                            </button>
+                            <div class="form-status" id="form-status" role="status" aria-live="polite" style="margin-top: 14px; font-size: 14px; min-height: 20px;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ═══════════════════════════════════════════════════
+         09. FOOTER
+    ═══════════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#home" class="footer-logo logo" aria-label="Return to top">
+                <span class="logo-bracket">&lt;</span>YT<span class="logo-dot">.</span><span class="logo-bracket">/&gt;</span>
+            </a>
+            <p class="footer-tagline">
+                Architecting high-performance mobile applications and reliable distributed systems.
+            </p>
+            <nav class="footer-nav" aria-label="Footer links">
+                <a href="#work" class="footer-link">Work</a>
+                <a href="#about" class="footer-link">About</a>
+                <a href="#experience" class="footer-link">Experience</a>
+                <a href="#skills" class="footer-link">Skills</a>
+                <a href="#contact" class="footer-link">Contact</a>
+                <a href="/Yiheyis-Tamir-Ayalew-Resume.pdf" download="Yiheyis-Tamir-Ayalew-Resume.pdf" class="footer-link">Résumé PDF</a>
+            </nav>
+            <p class="footer-copyright mono" style="font-size: 0.8rem; color: var(--text-tertiary);">
+                © <span id="footer-year">2026</span> Yiheyis Tamir Ayalew. Built with precision.
+            </p>
+        </div>
+    </footer>
+    
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top" id="back-top" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="19" x2="12" y2="5"/>
+            <polyline points="5 12 12 5 19 12"/>
+        </svg>
+    </button>
+    
+    <!-- Case Study Modal Dialog Container -->
+    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true" hidden>
+        <div class="modal-container" role="document">
+            <button type="button" class="modal-close-btn" id="modal-close" aria-label="Close project case study">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div id="modal-body" class="modal-body-content"></div>
+        </div>
+    </div>
+    
+    <!-- ═══════════════════════════════════════════════════
+         MOBILE BOTTOM NAVIGATION BAR
+    ═══════════════════════════════════════════════════ -->
+    <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Mobile Navigation">
+        <a href="#home" class="bottom-nav-item active" data-nav="home" aria-label="Home section">
+            <svg class="bottom-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span class="bottom-nav-label">Home</span>
+        </a>
+        <a href="#work" class="bottom-nav-item" data-nav="work" aria-label="Work & Projects section">
+            <svg class="bottom-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span class="bottom-nav-label">Work</span>
+        </a>
+        <a href="#about" class="bottom-nav-item" data-nav="about" aria-label="About section">
+            <svg class="bottom-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="bottom-nav-label">About</span>
+        </a>
+        <a href="#experience" class="bottom-nav-item" data-nav="experience" aria-label="Experience & Education section">
+            <svg class="bottom-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span class="bottom-nav-label">Experience</span>
+        </a>
+        <a href="#contact" class="bottom-nav-item" data-nav="contact" aria-label="Contact section">
+            <svg class="bottom-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="bottom-nav-label">Contact</span>
+        </a>
+    </nav>
+    
+    <!-- Bundled Entry Script -->
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
