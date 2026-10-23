@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
+  <!-- Primary Homepage -->
   <url>
     <loc>https://www.yiheyis-tamir.tech/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://yiheyis-tamir.tech/</loc>
-    <lastmod>2026-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
 
-  <!-- Architectural Case Studies -->
+  <!-- Deep Architectural Case Studies -->
   <url>
     <loc>https://www.yiheyis-tamir.tech/project-detail?id=bayment</loc>
     <lastmod>2026-10-24</lastmod>
