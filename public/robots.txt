@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yiheyis-tamir.tech/sitemap.xml
