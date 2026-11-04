@@ -355,13 +355,21 @@ function initScrollReveal() {
 }
 
 /* ==========================================================================
-   More Builds — ranked one-liner list
+   More Builds — compact card grid
    ========================================================================== */
 const MORE_BUILD_IDS = [
   'mehaleq', 'menumate', 'taxi-fare', 'deshet-stream', 'seri-vote',
   'guadaye', 'social-gebeya', 'disease-prediction', 'up-and-work',
   'smart-helmet'
 ];
+
+const CATEGORY_LABELS = {
+  ai: 'AI',
+  backend: 'Backend',
+  mobile: 'Mobile',
+  web: 'Web',
+  other: 'Hardware'
+};
 
 function initProjects() {
   const moreBuildsContainer = document.getElementById('more-builds');
@@ -371,13 +379,26 @@ function initProjects() {
     .map(id => PROJECTS_DATA.find(p => p.id === id))
     .filter(Boolean);
 
-  moreBuildsContainer.innerHTML = items.map(p => `
-    <a class="more-builds-item" href="project-detail.html?id=${p.id}">
-      <span class="more-builds-name">${p.name}</span>
-      <span class="more-builds-line">${p.shortDesc}</span>
-      <span class="more-builds-cta" aria-hidden="true">→</span>
+  moreBuildsContainer.innerHTML = items.map(p => {
+    const chips = (p.tech || []).slice(0, 3);
+    const extra = Math.max((p.tech || []).length - 3, 0);
+    const category = CATEGORY_LABELS[p.category] ||
+      (p.category ? p.category.charAt(0).toUpperCase() + p.category.slice(1) : '');
+    return `
+    <a class="mb-card" href="project-detail.html?id=${p.id}">
+      <div class="mb-card-top">
+        <span class="mb-card-cat">${category}</span>
+        ${p.isPrivate ? '<span class="mb-card-lock" title="Private project">🔒</span>' : ''}
+      </div>
+      <span class="mb-card-name">${p.name}</span>
+      <span class="mb-card-desc">${p.shortDesc}</span>
+      <div class="mb-card-tech">
+        ${chips.map(t => `<span class="mb-chip">${t}</span>`).join('')}
+        ${extra ? `<span class="mb-chip more">+${extra}</span>` : ''}
+      </div>
     </a>
-  `).join('');
+  `;
+  }).join('');
 }
 
 
