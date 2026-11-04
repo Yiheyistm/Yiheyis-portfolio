@@ -27,7 +27,7 @@
   --text-pure: #FFFFFF;            /* User Swatch: Text */
   --text-primary: #F3F3F3;
   --text-secondary: #A8A8A8;
-  --text-tertiary: #737373;
+  --text-tertiary: #A6A6A6;
   --text-dim: #525252;
 
   /* Accent: Vibrant Sunset Amber */
@@ -99,7 +99,7 @@
   --text-dim: #6E6E6E;             /* Crisp legible gray */
 
   /* Accent: Warm Amber with WCAG AA Contrast on Light Canvas */
-  --accent: #C25E1A;
+  --accent: #B4500F;
   --accent-hover: #A04A10;
   --accent-dim: rgba(194, 94, 26, 0.10);
   --accent-glow: rgba(224, 115, 42, 0.22);
@@ -1502,6 +1502,26 @@ input:checked + .slider-toggle:before {
   background: rgba(4, 120, 87, 0.08);
 }
 
+/* The Bayment simulator console and architecture diagram stay dark-navy in
+   BOTH themes, so light-theme text tokens (meant for cream backgrounds) must
+   be overridden to a dark-console palette inside them. */
+[data-theme="light"] .bayment-container .ctrl-row,
+[data-theme="light"] .bayment-container .bal-title,
+[data-theme="light"] .bayment-container .status-msg,
+[data-theme="light"] .cs-diagram-header,
+[data-theme="light"] .cs-diagram-header .btn-ghost {
+  color: #a8b3c5;
+}
+[data-theme="light"] .btn-transfer {
+  color: #FFFFFF;
+}
+[data-theme="light"] .tx-amount.neg {
+  color: #be123c;
+}
+[data-theme="light"] .cs-decision-tradeoff {
+  color: #92400E;
+}
+
 /* ==========================================================================
    08. ABOUT SECTION (AUTHORITATIVE & CREDIBLE)
    ========================================================================== */
@@ -2552,7 +2572,7 @@ html.js .hero [data-reveal] {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   background: var(--accent-dim);
-  color: var(--accent);
+  color: var(--accent-hover);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-full);
 }
