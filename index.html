@@ -28,13 +28,31 @@
     <meta property="twitter:description" content="I build production-ready mobile apps and backend systems. Flutter, Go, Django, and AI-powered products.">
     <meta property="twitter:image" content="https://www.yiheyis-tamir.tech/images/p1.jpg">
     
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yiheyis Tamir Ayalew",
+      "alternateName": "Yiheyis Tamir",
+      "jobTitle": "Software Engineer",
+      "url": "https://www.yiheyis-tamir.tech/",
+      "description": "Software engineer building production mobile and backend products for the Ethiopian market: fintech, marketplaces, and Amharic-language AI.",
+      "sameAs": [
+        "https://github.com/Yiheyistm",
+        "https://linkedin.com/in/yiheyis-tamir-b56aa8300",
+        "https://t.me/Abetobr"
+      ]
+    }
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     
     <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Theme & Progressive Enhancement Bootstrap -->
     <script>
@@ -71,12 +89,9 @@
             
             <nav class="navbar" id="navbar" aria-label="Primary portfolio navigation">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#work" class="nav-link">Work</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#achievements" class="nav-link">Honors</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -98,13 +113,13 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
-                <a href="/Yiheyis-Tamir-Ayalew-Resume.pdf" download="Yiheyis-Tamir-Ayalew-Resume.pdf" class="btn btn-sm btn-outline header-resume-btn" aria-label="Download Résumé PDF">
+                <a href="/Yiheyis-Tamir-Ayalew-Resume.pdf" download="Yiheyis-Tamir-Ayalew-Resume.pdf" class="btn btn-sm btn-outline header-resume-btn" aria-label="Download Resume PDF">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
                         <polyline points="7 10 12 15 17 10"/>
                         <line x1="12" y1="15" x2="12" y2="3"/>
                     </svg>
-                    <span>Résumé</span>
+                    <span>Resume</span>
                 </a>
             </div>
         </div>
@@ -120,41 +135,19 @@
         <section id="home" class="hero section">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <!-- Cybernetic System Status Line (Peter Parker Inspired) -->
-                    <div class="hero-status-line" data-reveal>
-                        <span class="status-accent-pipe">|</span>
-                        <span class="status-meta">SYSTEM STATUS:</span>
-                        <span class="status-badge-text">
-                            <span class="badge-dot"></span>
-                            AVAILABLE FOR ENGINEERING ROLES
-                        </span>
-                        <span class="status-divider-line" aria-hidden="true"></span>
-                    </div>
-                    
-                    <!-- Massive Two-Tone Name Display (Solid Top + Outlined Bottom) -->
-                    <h1 class="hero-name-block" data-reveal data-reveal-delay="60">
+                    <!-- Name + positioning -->
+                    <h1 class="hero-name-block" data-reveal>
                         <span class="hero-name-solid">YIHEYIS</span>
                         <span class="hero-name-outline">TAMIR</span>
                     </h1>
                     
                     <div class="hero-accent-bar" data-reveal data-reveal-delay="100" aria-hidden="true"></div>
-                    
-                    <!-- Architectural Role Definition -->
-                    <div class="hero-role-label" data-reveal data-reveal-delay="140">
-                        <span class="mono">// ROLE_DEFINITION &amp; ARCHITECTURE</span>
-                    </div>
 
-                    <div class="hero-tagline" data-reveal data-reveal-delay="180">
-                        I build <span class="hero-nowrap">production-ready</span> mobile apps &amp; backend systems.
+                    <div class="hero-tagline" data-reveal data-reveal-delay="140">
+                        I build mobile &amp; backend products people actually use in Ethiopia — payments, marketplaces, and Amharic-language AI.
                     </div>
                     
-                    <div class="hero-subtitle" data-reveal data-reveal-delay="220">
-                        <span class="mono text-tertiary">$ role --current</span>
-                        <span id="typing-text" class="typing-text">Backend Systems Architect</span>
-                        <span class="typing-cursor"></span>
-                    </div>
-                    
-                    <p class="hero-bio" data-reveal data-reveal-delay="260">
+                    <p class="hero-bio" data-reveal data-reveal-delay="180">
                         Honor graduate of AASTU. Experienced in delivering full-stack products with Flutter mobile clients, Go &amp; Django REST backends, event-driven microservices, and practical RAG AI pipelines.
                     </p>
                     
@@ -172,7 +165,7 @@
                                 <polyline points="7 10 12 15 17 10"/>
                                 <line x1="12" y1="15" x2="12" y2="3"/>
                             </svg>
-                            Download Résumé
+                            Download Resume
                         </a>
                         <div class="hero-social-divider" aria-hidden="true"></div>
                         <div class="hero-social-strip">
@@ -210,132 +203,10 @@
                 
                 <!-- Right Visual: Live System Architecture & Telemetry Console -->
                 <div class="hero-visual" data-reveal data-reveal-delay="200">
-                    <div class="telemetry-console">
-                        <div class="console-topbar">
-                            <div class="console-dots">
-                                <span class="console-dot red"></span>
-                                <span class="console-dot yellow"></span>
-                                <span class="console-dot green"></span>
-                            </div>
-                            <div class="console-tabs" role="tablist" aria-label="Console views">
-                                <button type="button" class="console-tab active" data-tab="topology" role="tab" aria-selected="true">topology.yaml</button>
-                                <button type="button" class="console-tab" data-tab="engineer" role="tab" aria-selected="false">engineer.go</button>
-                                <button type="button" class="console-tab" data-tab="telemetry" role="tab" aria-selected="false">telemetry.sh</button>
-                            </div>
-                            <span class="console-live-badge">
-                                <span class="pulse-dot-green"></span> LIVE
-                            </span>
-                        </div>
-                        
-                        <div class="console-body">
-                            <!-- Panel 1: Topology Architecture Flow -->
-                            <div class="console-panel active" id="panel-topology" role="tabpanel">
-                                <div class="arch-flow">
-                                    <!-- Node 1: Client Layer -->
-                                    <div class="arch-node">
-                                        <div class="arch-node-left">
-                                            <span class="arch-node-icon">📱</span>
-                                            <div>
-                                                <div class="arch-node-name">Client Application Layer</div>
-                                                <div class="arch-node-tech">Flutter · Dart · iOS / Android</div>
-                                            </div>
-                                        </div>
-                                        <span class="arch-node-status">60 FPS Sync</span>
-                                    </div>
-                                    
-                                    <!-- Node 2: Gateway Layer -->
-                                    <div class="arch-node">
-                                        <div class="arch-node-left">
-                                            <span class="arch-node-icon">⚡</span>
-                                            <div>
-                                                <div class="arch-node-name">High-Concurrency API Gateway</div>
-                                                <div class="arch-node-tech">Go (Golang) · Gin · JWT Auth</div>
-                                            </div>
-                                        </div>
-                                        <span class="arch-node-status">18ms p99</span>
-                                    </div>
-                                    
-                                    <!-- Node 3: Messaging Layer -->
-                                    <div class="arch-node">
-                                        <div class="arch-node-left">
-                                            <span class="arch-node-icon">🐇</span>
-                                            <div>
-                                                <div class="arch-node-name">Asynchronous Event Exchange</div>
-                                                <div class="arch-node-tech">RabbitMQ · Message Queuing · Idempotency</div>
-                                            </div>
-                                        </div>
-                                        <span class="arch-node-status">0 Drops</span>
-                                    </div>
-                                    
-                                    <!-- Node 4: Core Services & AI -->
-                                    <div class="arch-node">
-                                        <div class="arch-node-left">
-                                            <span class="arch-node-icon">🧠</span>
-                                            <div>
-                                                <div class="arch-node-name">Transactional Core &amp; AI Vector DB</div>
-                                                <div class="arch-node-tech">Django REST · PostgreSQL · RAG Pipeline</div>
-                                            </div>
-                                        </div>
-                                        <span class="arch-node-status">ACID Strict</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Real-time Telemetry Bar -->
-                                <div class="console-telemetry">
-                                    <div class="telemetry-item">
-                                        <div class="telemetry-label">Cluster Uptime</div>
-                                        <div class="telemetry-val">99.98%</div>
-                                    </div>
-                                    <div class="telemetry-item">
-                                        <div class="telemetry-label">Mean Latency</div>
-                                        <div class="telemetry-val">24.2 ms</div>
-                                    </div>
-                                    <div class="telemetry-item">
-                                        <div class="telemetry-label">Ledger Discrepancy</div>
-                                        <div class="telemetry-val telemetry-val-success">0.00%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Panel 2: engineer.go Code View -->
-                            <div class="console-panel" id="panel-engineer" role="tabpanel" style="display: none;">
-                                <pre class="console-code"><code><span class="c-kw">package</span> <span class="c-pkg">main</span>
-
-<span class="c-kw">type</span> <span class="c-typ">Engineer</span> <span class="c-kw">struct</span> {
-    Name     <span class="c-typ">string</span>
-    Degree   <span class="c-typ">string</span>
-    CGPA     <span class="c-typ">float64</span>
-    Roles    []<span class="c-typ">string</span>
-    Primary  []<span class="c-typ">string</span>
-}
-
-<span class="c-kw">func</span> <span class="c-fn">NewEngineer</span>() *<span class="c-typ">Engineer</span> {
-    <span class="c-kw">return</span> &amp;<span class="c-typ">Engineer</span>{
-        Name:    <span class="c-str">"Yiheyis Tamir Ayalew"</span>,
-        Degree:  <span class="c-str">"B.Sc. Software Engineering (AASTU)"</span>,
-        Roles:   []<span class="c-typ">string</span>{<span class="c-str">"Mobile (Flutter)"</span>, <span class="c-str">"Backend (Go/Django)"</span>, <span class="c-str">"AI/RAG"</span>},
-        Primary: []<span class="c-typ">string</span>{<span class="c-str">"Go"</span>, <span class="c-str">"Dart"</span>, <span class="c-str">"Python"</span>, <span class="c-str">"PostgreSQL"</span>, <span class="c-str">"Docker"</span>},
-    }
-}</code></pre>
-                            </div>
-                            
-                            <!-- Panel 3: telemetry.sh Live Health Terminal -->
-                            <div class="console-panel" id="panel-telemetry" role="tabpanel" style="display: none;">
-                                <div class="terminal-view">
-                                    <div class="terminal-cmd"><span class="terminal-prompt">$</span> curl -s https://api.yiheyis-tamir.tech/v1/healthz</div>
-                                    <pre class="terminal-output"><code>{
-  <span class="c-key">"status"</span>: <span class="c-str">"HEALTHY"</span>,
-  <span class="c-key">"uptime"</span>: <span class="c-str">"99.98%"</span>,
-  <span class="c-key">"latency_p99"</span>: <span class="c-str">"18.4ms"</span>,
-  <span class="c-key">"services"</span>: {
-    <span class="c-key">"api_gateway"</span>: <span class="c-str">"ONLINE (Go/Gin)"</span>,
-    <span class="c-key">"event_bus"</span>: <span class="c-str">"RUNNING (RabbitMQ)"</span>,
-    <span class="c-key">"database"</span>: <span class="c-str">"SYNC (PostgreSQL)"</span>,
-    <span class="c-key">"rag_pipeline"</span>: <span class="c-str">"READY (FastAPI + Embeddings)"</span>
-  }
-}</code></pre>
-                                </div>
-                            </div>
+                    <div class="hero-screenshot-frame">
+                        <img src="/images/projects/bayment-home.jpg" alt="Bayment — FinTech app live on Google Play" class="hero-screenshot" width="640" height="800">
+                        <div class="hero-screenshot-caption">
+                            <span class="badge-dot"></span> Bayment — live on Google Play
                         </div>
                     </div>
                 </div>
@@ -348,14 +219,10 @@
         <section id="work" class="projects section">
             <div class="container">
                 <div class="section-header" data-reveal>
-                    <span class="section-tag mono">// product launches</span>
-                    <h2 class="section-title">Engineered Products &amp; Systems</h2>
-                    <p class="section-desc">Real products built for scale, performance, and real-world clients. Click any project to open the 11-point architectural case study.</p>
+                    <h2 class="section-title">Selected Work</h2>
+                    <p class="section-desc">Three flagship builds with full build stories — the problem, what I personally built, and the decisions behind it.</p>
                 </div>
-                
-                <!-- Category Filter Buttons -->
-                <div id="filter-btns" class="project-filters" data-reveal></div>
-                
+
                 <!-- Projects Showcase Container -->
                 <div class="projects-container">
                     
@@ -397,7 +264,7 @@
                             
                             <div class="spotlight-actions">
                                 <a href="project-detail.html?id=bayment" class="btn btn-primary">
-                                    Explore Engineering Case Study →
+                                    Read the build story →
                                 </a>
                                 <a href="https://play.google.com/store/apps/details?id=me.bayment.app" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                                     Google Play Store ↗
@@ -405,121 +272,108 @@
                             </div>
                         </div>
                         
-                        <!-- Right: Realistic Smartphone Mockup -->
+                        <!-- Right: Real production screenshot -->
                         <div class="spotlight-visual-area">
-                            <div class="phone-toggle-row">
-                                <button type="button" class="btn btn-sm btn-primary phone-tab-btn active" onclick="window.switchPhoneScreen(this, 'bayment-phone-screen', '/images/projects/bayment-home.jpg')">
-                                    Home
-                                </button>
-                                <button type="button" class="btn btn-sm btn-outline phone-tab-btn" onclick="window.switchPhoneScreen(this, 'bayment-phone-screen', '/images/projects/bayment-card.jpg')">
-                                    Card
-                                </button>
-                                <button type="button" class="btn btn-sm btn-outline phone-tab-btn" onclick="window.switchPhoneScreen(this, 'bayment-phone-screen', '/images/projects/bayment-setting.jpg')">
-                                    Settings
-                                </button>
-                            </div>
-                            <div class="phone-mockup">
-                                <div class="phone-notch"></div>
-                                <img id="bayment-phone-screen" src="/images/projects/bayment-home.jpg" alt="Bayment mobile app interface" class="phone-screen" loading="lazy">
-                            </div>
+                            <img src="/images/projects/bayment-cards.png" alt="Bayment virtual card and wallet screens" class="spotlight-screenshot" loading="lazy">
                         </div>
                     </article>
                     
                     <!-- ───────────────────────────────────────────
                          FLAGSHIP 2: MEHALEQ (AI Amharic Conversational Assistant)
                          ─────────────────────────────────────────── -->
-                    <article class="mehaleq-card" data-category="ai" data-id="mehaleq" data-reveal>
-                        <!-- Left: Live RAG Application Browser Frame -->
-                        <div class="ai-chat-preview" style="padding: 0; display: flex; flex-direction: column;">
-                            <div class="mehaleq-browser-frame">
-                                <div class="mehaleq-browser-bar">
-                                    <div class="mehaleq-browser-header">
-                                        <div class="mehaleq-browser-dots">
-                                            <span class="code-dot red"></span>
-                                            <span class="code-dot yellow"></span>
-                                            <span class="code-dot green"></span>
-                                        </div>
-                                        <div class="mehaleq-browser-url">mehaleq.tech · RAG v2</div>
-                                    </div>
-                                    <div class="mehaleq-tab-group">
-                                        <button type="button" class="btn btn-sm btn-primary mehaleq-tab-btn active" onclick="window.switchScreen(this, 'mehaleq-screen', '/images/projects/mehaleq_1.png')">
-                                            Cited Q&amp;A
-                                        </button>
-                                        <button type="button" class="btn btn-sm btn-outline mehaleq-tab-btn" onclick="window.switchScreen(this, 'mehaleq-screen', '/images/projects/mehaleq.png')">
-                                            Topic Portal
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="mehaleq-screen-container">
-                                    <img id="mehaleq-screen" src="/images/projects/mehaleq_1.png" alt="Mehaleq Ethiopian Capital Market RAG Interface" class="mehaleq-screen-img" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Right: Product Breakdown -->
-                        <div class="spotlight-content">
-                            <div class="spotlight-header">
-                                <div class="spotlight-badge-row">
-                                    <span class="badge-pill badge-pill-live">
-                                        <span class="badge-dot"></span> Specialized AI Architecture
-                                    </span>
-                                    <span class="tag-pill">AI / RAG</span>
-                                    <span class="tag-pill">Amharic NLP</span>
-                                </div>
-                                <h3 class="spotlight-title">Mehaleq — AI Amharic Conversational Assistant</h3>
-                                <div class="spotlight-subtitle">AI &amp; Backend Engineer · Retrieval-Augmented Generation (RAG)</div>
-                                <p class="spotlight-desc">
-                                    Overcomes severe token fragmentation and hallucination rates in low-resource Ethiopic (Ge'ez) script. Built with morphological text normalizers, hybrid vector embeddings, and domain-grounded context reranking.
-                                </p>
-                            </div>
-                            
-                            <div class="spotlight-highlights">
-                                <div class="spotlight-hl-item">Custom Ge'ez script transliteration normalizer eliminating character variant drift.</div>
-                                <div class="spotlight-hl-item">Hybrid retrieval (Dense Vector + BM25 sparse matching) with reranker verification.</div>
-                                <div class="spotlight-hl-item">FastAPI streaming backend delivering sub-200ms perceived response latency.</div>
-                            </div>
-                            
-                            <div class="spotlight-tags">
-                                <span class="tag-pill">Python</span>
-                                <span class="tag-pill">RAG</span>
-                                <span class="tag-pill">FastAPI</span>
-                                <span class="tag-pill">Vector Embeddings</span>
-                                <span class="tag-pill">Amharic NLP</span>
-                                <span class="tag-pill">LLM Grounding</span>
-                            </div>
-                            
-                            <div class="spotlight-actions">
-                                <a href="project-detail.html?id=mehaleq" class="btn btn-primary">
-                                    Explore Engineering Case Study →
-                                </a>
-                            </div>
-                        </div>
-                    </article>
                     
                     <!-- ───────────────────────────────────────────
                          SECONDARY PROJECTS GRID (Distinct Architectural Presentations)
                          ─────────────────────────────────────────── -->
-                    <div class="secondary-projects-grid" id="secondary-projects">
-                        <!-- Rendered by main.js -->
-                    </div>
-                    
                     <!-- ───────────────────────────────────────────
-                         04. ENGINEERING ARCHIVE (6 Systems & Prototypes)
+                         FLAGSHIP BUILD STORY LIST
                          ─────────────────────────────────────────── -->
-                    <div class="engineering-archive-section" id="engineering-archive" data-reveal>
-                        <div class="archive-header-card">
-                            <div class="archive-header-text">
-                                <span class="section-tag mono">// archival systems &amp; proofs-of-concept</span>
-                                <h3 class="archive-title">Engineering Archive</h3>
-                                <p class="archive-desc">Additional distributed microservices, machine learning models, and IoT embedded hardware projects.</p>
+                         
+                    <article class="spotlight-card" data-reveal>
+                        <div class="spotlight-content">
+                            <div class="spotlight-header">
+                                <div class="spotlight-badge-row">
+                                    <span class="tag-pill">EduTech</span>
+                                    <span class="tag-pill">Proprietary / Client</span>
+                                </div>
+                                <h3 class="spotlight-title">Seri LMS — Enterprise Learning Platform</h3>
+                                <div class="spotlight-subtitle">Backend &amp; Systems Architect · NestJS + Next.js Monorepo</div>
+                                <p class="spotlight-desc">
+                                    The real challenge here wasn't the code — it was trust. Students had to pay with local rails (Chapa, Telebirr, bank transfer) without ever getting scammed, and course videos had to stay off Telegram. So I built the payment audits and the video lock-up myself.
+                                </p>
                             </div>
-                            <button type="button" class="btn btn-outline" id="toggle-archive-btn" aria-expanded="false" aria-controls="archive-grid">
-                                Browse Engineering Archive (7 Systems) ↓
-                            </button>
+                            
+                            <div class="spotlight-highlights">
+                                <div class="spotlight-hl-item">Signed, token-locked Bunny Stream playback with per-session expiry — no direct URL sharing.</div>
+                                <div class="spotlight-hl-item">Redis BullMQ workers absorbing enrollment bursts so course seats can't double-sell.</div>
+                                <div class="spotlight-hl-item">Chapa webhooks plus manual bank-transfer audit trails, reconciled to the Birr.</div>
+                            </div>
+                            
+                            <div class="spotlight-tags">
+                                <span class="tag-pill">NestJS 11</span>
+                                <span class="tag-pill">Prisma 7</span>
+                                <span class="tag-pill">PostgreSQL</span>
+                                <span class="tag-pill">Redis / BullMQ</span>
+                                <span class="tag-pill">Bunny Stream DRM</span>
+                                <span class="tag-pill">Chapa</span>
+                            </div>
+                            
+                            <div class="spotlight-actions">
+                                <a href="project-detail.html?id=seri-lms" class="btn btn-primary">
+                                    Read the build story →
+                                </a>
+                            </div>
                         </div>
-                        <div class="archive-grid" id="archive-grid">
-                            <!-- Rendered dynamically by main.js -->
+                        
+                        <div class="spotlight-visual-area">
+                            <img src="/images/projects/seri_lms_1.png" alt="Seri LMS student platform with localized ETB payments" class="spotlight-screenshot" loading="lazy">
                         </div>
+                    </article>
+                    
+                    <article class="spotlight-card" data-reveal>
+                        <div class="spotlight-content">
+                            <div class="spotlight-header">
+                                <div class="spotlight-badge-row">
+                                    <span class="tag-pill">Marketplace</span>
+                                    <span class="tag-pill">Proprietary / Client</span>
+                                </div>
+                                <h3 class="spotlight-title">Fitawrari / ፊታውራሪ — Ethiopia's Verified Car Marketplace</h3>
+                                <div class="spotlight-subtitle">Full-Stack Architect · Next.js + NestJS Turborepo</div>
+                                <p class="spotlight-desc">
+                                    Car buying in Ethiopia runs on brokers — some legit, some scammers, and buyers can't tell until it costs them. Fitawrari puts sellers, buyers, and dealers on one platform where the dealership itself is verified. Trust is the product.
+                                </p>
+                            </div>
+                            
+                            <div class="spotlight-highlights">
+                                <div class="spotlight-hl-item">Verified dealer listings priced in ETB, with direct call/WhatsApp handoff built for how deals actually close.</div>
+                                <div class="spotlight-hl-item">Cut a vehicle page from ~15 MB of raw camera photos to under 800 KB with responsive WebP.</div>
+                                <div class="spotlight-hl-item">Shared Zod schemas keep browser and API validation in exact agreement.</div>
+                            </div>
+                            
+                            <div class="spotlight-tags">
+                                <span class="tag-pill">Next.js 16</span>
+                                <span class="tag-pill">NestJS 12</span>
+                                <span class="tag-pill">Prisma 7</span>
+                                <span class="tag-pill">PostgreSQL</span>
+                                <span class="tag-pill">Redis</span>
+                                <span class="tag-pill">Flutter</span>
+                            </div>
+                            
+                            <div class="spotlight-actions">
+                                <a href="project-detail.html?id=fitawrari" class="btn btn-primary">
+                                    Read the build story →
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="spotlight-visual-area">
+                            <img src="/images/projects/fitawrari_home.png" alt="Fitawrari vehicle marketplace home screen" class="spotlight-screenshot" loading="lazy">
+                        </div>
+                    </article>
+                    
+                    <!-- More builds: ranked one-liners -->
+                    <div class="more-builds" id="more-builds" data-reveal>
+                        <!-- Rendered by main.js -->
                     </div>
                 </div>
             </div>
@@ -531,30 +385,17 @@
         <section id="about" class="about section">
             <div class="container">
                 <div class="section-header" data-reveal>
-                    <span class="section-tag mono">// about</span>
                     <h2 class="section-title">The Engineer Behind the Code</h2>
                 </div>
                 
                 <div class="about-grid">
-                    <div class="about-photo-wrapper" data-reveal>
-                        <div class="about-photo-frame">
-                            <img src="/images/p1.jpg" alt="Yiheyis Tamir Ayalew — Software Engineer" class="about-photo-img" loading="lazy" width="360" height="440">
-                        </div>
-                        <div class="about-experience-badge">
-                            <div class="about-badge-icon">⚡</div>
-                            <div>
-                                <div class="about-badge-val">7+ Shipped Products</div>
-                                <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; color: var(--text-tertiary);">Production Work</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="about-text-col" data-reveal data-reveal-delay="150">
+                    <div class="about-text-col" data-reveal>
+
                         <p style="font-size: 1.15rem; line-height: 1.7; color: var(--text-primary); margin-bottom: 18px;">
-                            I am a Software Engineer and honor graduate of <strong>Addis Ababa Science and Technology University (AASTU)</strong>, specializing in cross-platform mobile engineering and scalable backend infrastructure.
+                            I am a Software Engineer and honor graduate of Addis Ababa Science and Technology University (AASTU), specializing in cross-platform mobile engineering and scalable backend infrastructure.
                         </p>
                         <p style="font-size: 1.02rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 18px;">
-                            My technical sweet spot is building seamless, native-performance applications in <strong>Flutter</strong> and backing them with high-throughput distributed systems in <strong>Go</strong> and <strong>Python/Django</strong>. I prioritize Clean Architecture, type safety, test isolation, and dependable production performance.
+                            My technical sweet spot is building seamless, native-performance applications in Flutter and backing them with high-throughput distributed systems in Go and Python/Django. I prioritize Clean Architecture, type safety, test isolation, and dependable production performance.
                         </p>
                         <p style="font-size: 1.02rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 28px;">
                             Selected for <strong>A2SV (Africa to Silicon Valley)</strong>, an elite engineering talent program backed by Google, where I completed rigorous algorithmic acceleration and solved <strong>600+ complex problems</strong> across LeetCode and Codeforces.
@@ -574,6 +415,30 @@
                                 <div class="about-competence-val">PostgreSQL · RabbitMQ · Docker</div>
                             </div>
                         </div>
+
+                        <div class="about-recognition">
+                            <div class="about-recognition-item">🏆 Hackatom international hackathon — 2nd place</div>
+                            <div class="about-recognition-item">
+                                <a href="https://codeforces.com/profile/yiheyisyt23" target="_blank" rel="noopener noreferrer">600+ problems on Codeforces</a> and
+                                <a href="https://leetcode.com/u/Tikursew/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+                            </div>
+                            <div class="about-recognition-item">
+                                Shipped <a href="https://play.google.com/store/apps/details?id=me.bayment.app" target="_blank" rel="noopener noreferrer">Bayment live on Google Play ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-photo-wrapper" data-reveal data-reveal-delay="100">
+                        <div class="about-photo-frame">
+                            <img src="/images/p1.jpg" alt="Yiheyis Tamir Ayalew — Software Engineer" class="about-photo-img" loading="lazy" width="360" height="440">
+                        </div>
+                        <div class="about-experience-badge">
+                            <div class="about-badge-icon">⚡</div>
+                            <div>
+                                <div class="about-badge-val">7+ Shipped Products</div>
+                                <div style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; color: var(--text-tertiary);">Production Work</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -585,9 +450,8 @@
         <section id="experience" class="experience section">
             <div class="container">
                 <div class="section-header" data-reveal>
-                    <span class="section-tag mono">// career &amp; acceleration</span>
-                    <h2 class="section-title">Verified Engineering Experience</h2>
-                    <p class="section-desc">Documented production contributions, elite Google acceleration, and university honors.</p>
+                    <h2 class="section-title">Experience</h2>
+                    <p class="section-desc">Production work, the A2SV acceleration program, and university honors.</p>
                 </div>
                 
                 <div class="timeline">
@@ -605,10 +469,10 @@
                                 <div class="timeline-period">Jul 2025 – Sep 2025 · Addis Ababa</div>
                             </div>
                             <ul class="timeline-bullets">
-                                <li class="timeline-bullet">Built <strong>30+ REST API endpoints in Go with Gin</strong> for a high-traffic publishing platform with AI recommendation algorithms.</li>
-                                <li class="timeline-bullet">Engineered <strong>65+ Go backend APIs</strong> connecting Flutter mobile and React clients for the MenuMate restaurant platform.</li>
-                                <li class="timeline-bullet">Applied <strong>Clean Architecture</strong> across multi-layered services to guarantee strict domain isolation and mock unit test coverage.</li>
-                                <li class="timeline-bullet">Introduced <strong>OCR computer vision scanning</strong> to digitize physical paper menus into structured, searchable digital databases.</li>
+                                <li class="timeline-bullet">Built <strong>30+ REST API endpoints</strong> in Go with Gin for a high-traffic publishing platform with AI recommendation algorithms.</li>
+                                <li class="timeline-bullet">Engineered 65+ Go backend APIs connecting Flutter mobile and React clients for the MenuMate restaurant platform.</li>
+                                <li class="timeline-bullet">Applied Clean Architecture across multi-layered services to guarantee strict domain isolation and mock unit test coverage.</li>
+                                <li class="timeline-bullet">Introduced OCR computer vision scanning to digitize physical paper menus into structured, searchable digital databases.</li>
                             </ul>
                             <div class="skill-list">
                                 <span class="skill-item">Go</span>
@@ -635,7 +499,7 @@
                             </div>
                             <ul class="timeline-bullets">
                                 <li class="timeline-bullet">Selected for the premier, Google-backed engineering acceleration program admitting top African software engineers.</li>
-                                <li class="timeline-bullet">Mastered advanced data structures &amp; algorithms: <strong>graphs, trees, dynamic programming, and memoization</strong>.</li>
+                                <li class="timeline-bullet">Mastered advanced data structures &amp; algorithms: graphs, trees, dynamic programming, and memoization.</li>
                                 <li class="timeline-bullet">Solved <strong>600+ LeetCode and Codeforces problems</strong> to reach expert-level algorithmic efficiency and asymptotic optimization.</li>
                             </ul>
                             <div class="skill-list">
@@ -676,166 +540,7 @@
             </div>
         </section>
         
-        <!-- ═══════════════════════════════════════════════════
-             06. SKILLS MATRIX
-        ═══════════════════════════════════════════════════ -->
-        <section id="skills" class="skills section">
-            <div class="container">
-                <div class="section-header" data-reveal>
-                    <span class="section-tag mono">// capabilities</span>
-                    <h2 class="section-title">Technical Competence</h2>
-                    <p class="section-desc">Production technologies, tools, and practices backed by shipped systems.</p>
-                </div>
-                
-                <div class="skills-grid">
-                    <div class="skill-card" data-reveal>
-                        <div class="skill-card-header">
-                            <div class="skill-icon">📱</div>
-                            <h3 class="skill-card-title">Mobile Engineering</h3>
-                        </div>
-                        <div class="skill-list">
-                            <span class="skill-item">Flutter</span>
-                            <span class="skill-item">Dart</span>
-                            <span class="skill-item">Android &amp; iOS</span>
-                            <span class="skill-item">State Management</span>
-                            <span class="skill-item">Offline Persistence</span>
-                            <span class="skill-item">Biometric Security</span>
-                            <span class="skill-item">Google Maps SDK</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card" data-reveal data-reveal-delay="100">
-                        <div class="skill-card-header">
-                            <div class="skill-icon">⚙️</div>
-                            <h3 class="skill-card-title">Backend &amp; Distributed APIs</h3>
-                        </div>
-                        <div class="skill-list">
-                            <span class="skill-item">Go (Golang)</span>
-                            <span class="skill-item">Gin Framework</span>
-                            <span class="skill-item">Python</span>
-                            <span class="skill-item">Django REST</span>
-                            <span class="skill-item">FastAPI</span>
-                            <span class="skill-item">RESTful Design</span>
-                            <span class="skill-item">JWT Authentication</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card" data-reveal data-reveal-delay="200">
-                        <div class="skill-card-header">
-                            <div class="skill-icon">🗄️</div>
-                            <h3 class="skill-card-title">Data &amp; Infrastructure</h3>
-                        </div>
-                        <div class="skill-list">
-                            <span class="skill-item">PostgreSQL</span>
-                            <span class="skill-item">TimescaleDB</span>
-                            <span class="skill-item">MongoDB</span>
-                            <span class="skill-item">RabbitMQ</span>
-                            <span class="skill-item">Docker &amp; Compose</span>
-                            <span class="skill-item">Linux Systems</span>
-                            <span class="skill-item">CI/CD Pipelines</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card" data-reveal data-reveal-delay="300">
-                        <div class="skill-card-header">
-                            <div class="skill-icon">🤖</div>
-                            <h3 class="skill-card-title">AI &amp; Practical RAG</h3>
-                        </div>
-                        <div class="skill-list">
-                            <span class="skill-item">RAG Architectures</span>
-                            <span class="skill-item">Vector Embeddings</span>
-                            <span class="skill-item">LLM Context Grounding</span>
-                            <span class="skill-item">Amharic NLP Tools</span>
-                            <span class="skill-item">Scikit-learn</span>
-                            <span class="skill-item">OCR Computer Vision</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card" data-reveal data-reveal-delay="400">
-                        <div class="skill-card-header">
-                            <div class="skill-icon">🧩</div>
-                            <h3 class="skill-card-title">Engineering Discipline</h3>
-                        </div>
-                        <div class="skill-list">
-                            <span class="skill-item">Clean Architecture</span>
-                            <span class="skill-item">Microservices</span>
-                            <span class="skill-item">Interface Mocking</span>
-                            <span class="skill-item">Unit &amp; Integration Testing</span>
-                            <span class="skill-item">Idempotent APIs</span>
-                            <span class="skill-item">Event-Driven Design</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card" data-reveal data-reveal-delay="500">
-                        <div class="skill-card-header">
-                            <div class="skill-icon">🧠</div>
-                            <h3 class="skill-card-title">Algorithmic Problem Solving</h3>
-                        </div>
-                        <div class="skill-list">
-                            <span class="skill-item">600+ Solved (LeetCode/Codeforces)</span>
-                            <span class="skill-item">Dynamic Programming</span>
-                            <span class="skill-item">Graph Traversals (BFS/DFS)</span>
-                            <span class="skill-item">Tree Structures</span>
-                            <span class="skill-item">Asymptotic Complexity O(N)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         
-        <!-- ═══════════════════════════════════════════════════
-             07. HONORS & ACHIEVEMENTS
-        ═══════════════════════════════════════════════════ -->
-        <section id="achievements" class="achievements section">
-            <div class="container">
-                <div class="section-header" data-reveal>
-                    <span class="section-tag mono">// recognition</span>
-                    <h2 class="section-title">Milestones &amp; Honors</h2>
-                </div>
-                
-                <div class="achievements-grid">
-                    <div class="achievement-card" data-reveal>
-                        <div>
-                            <div class="achievement-icon">🏆</div>
-                            <h3 class="achievement-title">Hackatom — 2nd Place</h3>
-                            <div class="achievement-subtitle">International Hackathon · Russian University</div>
-                            <p class="achievement-desc">Built a Flutter mobile app and web platform promoting nuclear energy awareness, competing and placing 2nd among international teams.</p>
-                        </div>
-                        <div class="cert-card-preview" onclick="window.openCertificate()" title="Click to view verified certificate">
-                            <img src="/images/certificate-1.png" alt="Google Developer Student Clubs Certificate Preview" loading="lazy">
-                        </div>
-                        <button type="button" class="btn btn-sm btn-outline" style="margin-top: 14px; width: 100%;" onclick="window.openCertificate()">
-                            View Official Certificate ↗
-                        </button>
-                    </div>
-                    
-                    <div class="achievement-card" data-reveal data-reveal-delay="100">
-                        <div>
-                            <div class="achievement-icon">💻</div>
-                            <h3 class="achievement-title">600+ Competitive Problems</h3>
-                            <div class="achievement-subtitle">LeetCode &amp; Codeforces</div>
-                            <p class="achievement-desc">Demonstrated algorithmic mastery across dynamic programming, graph traversal, and tree manipulation through rigorous continuous practice.</p>
-                        </div>
-                        <div style="display: flex; gap: 14px;">
-                            <a href="https://codeforces.com/profile/yiheyisyt23" target="_blank" rel="noopener noreferrer" class="achievement-link">Codeforces ↗</a>
-                            <a href="https://leetcode.com/u/Tikursew/" target="_blank" rel="noopener noreferrer" class="achievement-link">LeetCode ↗</a>
-                        </div>
-                    </div>
-                    
-                    <div class="achievement-card" data-reveal data-reveal-delay="200">
-                        <div>
-                            <div class="achievement-icon">📱</div>
-                            <h3 class="achievement-title">Live Play Store App</h3>
-                            <div class="achievement-subtitle">Bayment FinTech Virtual Card Platform</div>
-                            <p class="achievement-desc">Engineered and shipped a production FinTech app to Google Play handling live card issuance, state controls, and peer-to-peer ledger payments.</p>
-                        </div>
-                        <a href="https://play.google.com/store/apps/details?id=me.bayment.app" target="_blank" rel="noopener noreferrer" class="achievement-link">
-                            View on Google Play ↗
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
         
         <!-- ═══════════════════════════════════════════════════
              08. CONTACT SECTION
@@ -843,9 +548,8 @@
         <section id="contact" class="contact section">
             <div class="container">
                 <div class="section-header" data-reveal>
-                    <span class="section-tag mono">// get in touch</span>
-                    <h2 class="section-title">Let's Build Something High-Impact</h2>
-                    <p class="section-desc">Open to full-time software engineering roles, high-impact contract projects, and technical collaborations.</p>
+                    <h2 class="section-title">Get in touch</h2>
+                    <p class="section-desc">Open to software engineering roles, contract projects, and technical collaborations.</p>
                 </div>
                 
                 <div class="contact-grid">
@@ -943,18 +647,17 @@
                 <span class="logo-bracket">&lt;</span>YT<span class="logo-dot">.</span><span class="logo-bracket">/&gt;</span>
             </a>
             <p class="footer-tagline">
-                Architecting high-performance mobile applications and reliable distributed systems.
+                Mobile and backend products, built for real users.
             </p>
             <nav class="footer-nav" aria-label="Footer links">
                 <a href="#work" class="footer-link">Work</a>
                 <a href="#about" class="footer-link">About</a>
                 <a href="#experience" class="footer-link">Experience</a>
-                <a href="#skills" class="footer-link">Skills</a>
                 <a href="#contact" class="footer-link">Contact</a>
-                <a href="/Yiheyis-Tamir-Ayalew-Resume.pdf" download="Yiheyis-Tamir-Ayalew-Resume.pdf" class="footer-link">Résumé PDF</a>
+                <a href="/Yiheyis-Tamir-Ayalew-Resume.pdf" download="Yiheyis-Tamir-Ayalew-Resume.pdf" class="footer-link">Resume PDF</a>
             </nav>
             <p class="footer-copyright mono" style="font-size: 0.8rem; color: var(--text-tertiary);">
-                © <span id="footer-year">2026</span> Yiheyis Tamir Ayalew. Built with precision.
+                © <span id="footer-year">2026</span> Yiheyis Tamir Ayalew.
             </p>
         </div>
     </footer>
@@ -967,22 +670,7 @@
         </svg>
     </button>
     
-    <!-- Case Study Modal Dialog Container -->
-    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true" hidden>
-        <div class="modal-container" role="document">
-            <button type="button" class="modal-close-btn" id="modal-close" aria-label="Close project case study">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div id="modal-body" class="modal-body-content"></div>
-        </div>
-    </div>
-    
-    <!-- ═══════════════════════════════════════════════════
-         MOBILE BOTTOM NAVIGATION BAR
-    ═══════════════════════════════════════════════════ -->
+    <!-- Mobile Bottom Navigation Bar -->
     <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Mobile Navigation">
         <a href="#home" class="bottom-nav-item active" data-nav="home" aria-label="Home section">
             <svg class="bottom-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>

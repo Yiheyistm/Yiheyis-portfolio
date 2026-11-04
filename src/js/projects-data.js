@@ -1,7 +1,7 @@
 /**
- * Yiheyis Tamir Ayalew — Comprehensive Engineering Case Studies Dataset
- * Single source of truth for both Homepage modals and Standalone Case Study pages (project-detail.html).
- * Covers both Featured Projects and Secondary / Mentioned Projects.
+ * Yiheyis Tamir Ayalew — Comprehensive Build Story Dataset
+ * Single source of truth for the Homepage projects section and standalone Build Story pages (project-detail.html).
+ * Covers the flagship projects and the "More builds" list.
  * Strictly adheres to verified facts, authentic screenshots, and honest engineering roles.
  */
 
@@ -44,9 +44,9 @@ export const PROJECTS_DATA = [
 
     caseStudy: {
       overview: {
-        summary: 'Bayment is a production-grade financial technology platform engineered to bridge international payment gaps for African consumers and businesses by provisioning instantly usable virtual Mastercards backed by domestic funding rails.',
-        targetAudience: 'African software developers, digital marketers, and online consumers who require globally accepted payment cards for cloud hosting (AWS, DigitalOcean), SaaS subscriptions, and digital commerce where local domestic debit cards are routinely rejected.',
-        problemAddressed: 'Local debit cards issued across several African banking systems are frequently declined for cross-border digital transactions due to foreign exchange settlement restrictions and missing 3D-Secure 2.0 interoperability. Users needed a secure, regulatory-compliant mobile wallet that converts local domestic deposits into instantly spendable virtual international cards.'
+        summary: 'Bayment started as a frustration every Ethiopian developer knows: you want AWS, you have a local debit card, and the two don\'t speak to each other. My job was the whole loop — the Flutter wallet people hold, the Django API that moves the money, and the webhook pipeline that has to get every bank callback right, because in payments "almost right" is a bug that costs money.',
+        targetAudience: 'Ethiopian developers, digital marketers, and online consumers who need globally accepted cards for cloud hosting (AWS, DigitalOcean), SaaS subscriptions, and digital commerce — everywhere a local debit card gets rejected.',
+        problemAddressed: 'Local debit cards are routinely declined for cross-border digital transactions because of foreign-exchange settlement restrictions and missing 3D-Secure 2.0 interoperability. Bayment converts local domestic deposits into instantly spendable virtual international cards inside a secure, regulatory-compliant wallet.'
       },
       contribution: {
         verifiableRole: 'Full-Stack Software Engineer & Mobile Architect',
@@ -59,7 +59,7 @@ export const PROJECTS_DATA = [
         teamScope: 'Collaborated with regulatory compliance advisors on KYC/AML policy thresholds and coordinated with bank partner integration engineers for API sandbox certification.'
       },
       engineering: {
-        architectureSummary: 'Multi-tiered client-server architecture. The Flutter mobile app communicates over TLS 1.3 with a Django REST backend running in containerized Docker instances. Double-entry accounting ledgers in PostgreSQL ensure zero-discrepancy financial balance tracking.',
+        architectureSummary: 'Multi-tier client–server architecture. The Flutter app talks over TLS 1.3 to a Django REST backend running in containerized Docker, while a double-entry accounting ledger in PostgreSQL keeps wallet balances provably consistent.',
         systemDiagram: `[ Flutter Mobile Client ]
          │ (HTTPS / TLS 1.3 with JWT & Biometric Key)
          ▼
@@ -73,8 +73,8 @@ export const PROJECTS_DATA = [
          │
          ├── Banking Settlement Rails (Domestic Deposit Verification)
          └── Virtual Card Partner API (Card Provisioning & CVV Rotation)`,
-        backendScope: 'Python 3.11 with Django REST Framework, PostgreSQL with ACID transaction isolation, Celery/Redis for background reconciliation, Docker for reproducible environments.',
-        frontendScope: 'Flutter & Dart with responsive layout for Android and iOS, secure device storage for token management, real-time card flip and masking animations.',
+        backendScope: 'Python 3.11 with Django REST Framework, PostgreSQL, Celery/Redis for background reconciliation, Docker for reproducible environments.',
+        frontendScope: 'Flutter & Dart targeting Android and iOS, secure device storage for tokens, real-time card flip and masking animations.',
         apiAndData: {
           apis: 'RESTful JSON endpoints with JWT authentication, custom idempotency key validation on all money-moving operations, and cryptographic signature verification on incoming partner webhooks.',
           database: 'PostgreSQL utilizing row-level locks (SELECT ... FOR UPDATE) during wallet balance modifications to prevent concurrent race conditions.',
@@ -85,26 +85,26 @@ export const PROJECTS_DATA = [
         decisions: [
           {
             decision: 'Selected Flutter for single-codebase cross-platform mobile delivery.',
-            rationale: 'Delivered identical 60fps card interactions and security controls across both Android and iOS with half the development overhead of dual native stacks.',
-            tradeOff: 'Slightly larger initial binary download size compared to pure native Kotlin.'
+            rationale: 'Identical card interactions and security controls on Android and iOS with half the overhead of dual native stacks.',
+            tradeOff: 'Slightly larger initial download than pure native Kotlin.'
           },
           {
             decision: 'Implemented double-entry bookkeeping ledger schema in PostgreSQL.',
-            rationale: 'Every transaction creates balancing debit and credit entries. Ensures the wallet balance is always a computed sum of verified ledger items rather than a mutable standalone integer column.',
-            tradeOff: 'Requires additional write operations and transaction overhead per transfer.'
+            rationale: 'The balance is always a computed sum of balanced debit/credit entries, never a mutable standalone column.',
+            tradeOff: 'Extra write operations per transfer.'
           },
           {
-            decision: 'Tokenized card details (PAN and CVV) without storing raw numbers in application database.',
-            rationale: 'Dramatically reduces PCI-DSS liability and eliminates plaintext credential breach risks.',
-            tradeOff: 'Requires secure API roundtrips to card partner for authorized user card reveals.'
+            decision: 'Tokenized card details (PAN and CVV) instead of storing raw numbers in the database.',
+            rationale: 'Cuts PCI-DSS liability and eliminates plaintext credential breach risk.',
+            tradeOff: 'Secure API roundtrips to the card partner for authorized reveals.'
           }
         ]
       },
       challenges: {
-        challenge: 'Handling transient network dropouts during virtual card provisioning where the downstream partner API created a card, but the mobile client lost connection before receiving the response, leading to user retry clicks.',
-        investigation: 'Examined server access logs and transaction idempotency records, identifying duplicate provisioning requests initiated by users when mobile connections dropped in transit.',
-        solution: 'Implemented a saga-style reconciliation state machine. Client requests generate a deterministic UUIDv4 idempotency key prior to dispatch. If a timeout occurs, subsequent retries poll the backend transaction state rather than initiating new card generation calls.',
-        tradeOffs: 'Slightly higher state tracking complexity on the mobile client during loading states.',
+        challenge: 'Network dropouts during virtual card provisioning: the partner API created a card, but the client lost connection before receiving the response — and users clicked retry.',
+        investigation: 'Traced server access logs and idempotency records to find duplicate provisioning requests caused by dropped mobile connections.',
+        solution: 'A reconciliation state machine: each request carries a deterministic UUIDv4 idempotency key generated before dispatch, so retries poll transaction state instead of creating new cards.',
+        tradeOffs: 'More state tracking on the mobile client during loading states.',
         lessonsLearned: 'In financial software, idempotency keys and state machines are mandatory at every boundary where funds or payment instruments are created.'
       },
       outcome: {
@@ -148,7 +148,7 @@ export const PROJECTS_DATA = [
     name: 'Mehaleq / ECMI',
     subtitle: 'Ethiopian Capital Market AI & RAG Intelligence Layer',
     category: 'ai',
-    featured: true,
+    featured: false,
     isPrivate: true,
     image: '/images/projects/mehaleq.png',
     gallery: [
@@ -169,7 +169,7 @@ export const PROJECTS_DATA = [
     github: null,
     live: null,
     liveLabel: null,
-    shortDesc: 'Engineered an Amharic-language RAG conversational assistant for Ethiopian capital markets, developing morphological text normalizers and hybrid vector retrieval to deliver citation-backed answers.',
+    shortDesc: 'Co-built (two-person team) an Amharic-language RAG conversational assistant for Ethiopian capital markets, working across morphological text normalizers, hybrid vector retrieval, and citation-backed answers.',
 
     caseStudy: {
       overview: {
@@ -178,14 +178,14 @@ export const PROJECTS_DATA = [
         problemAddressed: 'General-purpose LLMs produce severe hallucinations and outdated information when questioned about emerging financial regulations in Ethiopia, particularly when queried in Amharic where training data is scarce and tokenization is inefficient.'
       },
       contribution: {
-        verifiableRole: 'AI & Systems Engineer',
+        verifiableRole: 'AI & Systems Engineer — two-person build, shared ownership',
         personalScope: [
-          'Engineered the domain-specific Retrieval-Augmented Generation (RAG) pipeline in Python and FastAPI.',
-          'Implemented Ge\'ez script character normalization and phonetic stopword filtering to overcome spelling variants common in Amharic legal texts.',
-          'Built hybrid retrieval combining dense vector semantic search with sparse BM25 keyword matching for high-precision regulatory lookups.',
-          'Implemented strict paragraph citation attribution to ensure every AI answer references the exact proclamation number and paragraph.'
+          'Co-built the domain-specific Retrieval-Augmented Generation (RAG) pipeline in Python and FastAPI with a teammate.',
+          'Helped implement Ge\'ez script character normalization and phonetic stopword filtering to overcome spelling variants common in Amharic legal texts.',
+          'Worked on the hybrid retrieval setup combining dense vector semantic search with sparse BM25 keyword matching for high-precision regulatory lookups.',
+          'Helped implement strict paragraph citation attribution so every AI answer references the exact proclamation number and paragraph.'
         ],
-        teamScope: 'Collaborated with financial domain researchers who curated the legal corpus and frontend developers who built the Next.js portal.'
+        teamScope: 'A two-person build throughout: responsibilities were shared rather than split cleanly, with financial domain researchers curating the legal corpus and frontend developers building the Next.js portal.'
       },
       engineering: {
         architectureSummary: 'Two-stage hybrid retrieval architecture. User queries are normalized, embedded, and queried against vector indexes while concurrently searched with BM25 keyword matching. Retrieved chunks are reranked and synthesized into grounded answers with citations.',
@@ -279,7 +279,7 @@ export const PROJECTS_DATA = [
     name: 'Taxi Fare Payment System',
     subtitle: 'Event-Driven Transit Microservices Platform',
     category: 'backend',
-    featured: true,
+    featured: false,
     isPrivate: true,
     image: '/images/projects/taxi_map.png',
     gallery: [
@@ -451,7 +451,7 @@ export const PROJECTS_DATA = [
 
     caseStudy: {
       overview: {
-        summary: 'Fitawrari (ፊታውራሪ) is a modern automotive marketplace and dealer management platform designed specifically for the Ethiopian automotive trade, offering transparent pricing in Ethiopian Birr (ETB), verified dealership listings, and direct mobile communication.',
+        summary: 'Car buying in Ethiopia still runs through brokers and informal Telegram listings — some dealers are legit, some are scammers, and buyers usually cannot tell the difference until it is expensive. Fitawrari was born from that frustration: one marketplace where sellers, buyers, and dealers meet, dealerships themselves are verified, and everything is priced transparently in Ethiopian Birr. Trust is the one thing existing platforms do not offer — that is the product.',
         targetAudience: 'Ethiopian automotive buyers, private sellers, and licensed car dealerships seeking verified vehicle transactions without predatory middleman fees.',
         problemAddressed: 'Car buying in Ethiopia has traditionally been confined to unstructured Telegram channels and informal broker networks with fake listings, phantom pricing, and zero vehicle condition transparency. Mobile users experience slow loading and disorganized catalogs.'
       },
@@ -552,7 +552,7 @@ export const PROJECTS_DATA = [
     name: 'MenuMate',
     subtitle: 'Restaurant & Menu Digitalizer Platform',
     category: 'backend',
-    featured: true,
+    featured: false,
     isPrivate: false,
     image: null,
     tech: ['Go (Golang)', 'Gin', 'Clean Architecture', 'OCR Computer Vision', 'PostgreSQL', 'Flutter', 'React'],
@@ -664,7 +664,7 @@ export const PROJECTS_DATA = [
     name: 'Social Gebeya & Tapela',
     subtitle: 'Ethiopian Social Engagement Marketplace & Promotion',
     category: 'backend',
-    featured: true,
+    featured: false,
     isPrivate: false,
     image: '/images/projects/social_gebeya_landing.png',
     gallery: [
@@ -809,7 +809,7 @@ export const PROJECTS_DATA = [
     name: 'Deshet Stream',
     subtitle: 'Cinematic Movie & TV Discovery Platform',
     category: 'backend',
-    featured: true,
+    featured: false,
     isPrivate: false,
     image: '/images/projects/deshet_stream_hero_movie.png',
     gallery: [
@@ -996,7 +996,7 @@ export const PROJECTS_DATA = [
 
     caseStudy: {
       overview: {
-        summary: 'Seri LMS is a scalable, enterprise-grade learning management platform designed for universities and vocational training institutions in East Africa, combining structured curriculum progression with secure, piracy-protected video streaming.',
+        summary: 'Seri LMS is an end-to-end learning management platform for universities and vocational institutions in East Africa. The pressure of building it was not the code — it was trust: students pay through local rails like Chapa and bank transfer, so scam-proofing the payment flow and locking course videos so they cannot leak onto Telegram became the heart of what I built, not an afterthought.',
         targetAudience: 'Vocational institutes, universities, and professional course creators needing an end-to-end LMS with student progress tracking, video DRM protection, and localized tuition payment collection.',
         problemAddressed: 'Online educational platforms in developing markets frequently suffer from course video piracy (unauthorized downloading and sharing) and struggle with high student enrollment concurrency when tuition payment deadlines approach.'
       },
@@ -1239,113 +1239,6 @@ export const PROJECTS_DATA = [
   },
 
   /* ==========================================================================
-     10. FOODFLOW MICROSERVICES (Distributed Food Delivery & Payment)
-     ========================================================================== */
-  {
-    id: 'foodflow',
-    name: 'FoodFlow Microservices',
-    subtitle: 'Distributed Food Delivery & Payment Architecture',
-    category: 'backend',
-    featured: false,
-    isPrivate: false,
-    image: '/images/projects/foodflow-payment.png',
-    gallery: [
-      {
-        url: '/images/projects/foodflow-payment.png',
-        caption: 'FoodFlow microservices payment processing flow diagram and Docker Compose topology.'
-      }
-    ],
-    tech: ['Node.js', 'Go (Golang)', 'RabbitMQ', 'Docker Compose', 'JWT Auth', 'PostgreSQL', 'Idempotency'],
-    github: null,
-    live: null,
-    liveLabel: null,
-    shortDesc: 'Built an event-driven food ordering backend using Go microservices, RabbitMQ message queues for asynchronous order fulfillment, and idempotent payment handling.',
-
-    caseStudy: {
-      overview: {
-        summary: 'FoodFlow is a distributed microservices platform engineered to model end-to-end food delivery workflows, driver dispatch queues, and resilient payment coordination with idempotency keys.',
-        targetAudience: 'Software engineering teams studying distributed systems design, message queue patterns, and fault-tolerant financial settlement.',
-        problemAddressed: 'Handling concurrent driver assignments and payment double-charges during network dropouts in food ordering architectures.'
-      },
-      contribution: {
-        verifiableRole: 'Backend & Microservices Engineer',
-        personalScope: [
-          'Modeled the database schemas across isolated service boundaries.',
-          'Implemented the payment service with idempotent transaction processing.',
-          'Configured RabbitMQ message exchanges and dead-letter queue isolation.',
-          'Built the Docker Compose orchestration environment for local and staging deployment.'
-        ],
-        teamScope: 'Collaborated on API contract specifications and end-to-end integration tests.'
-      },
-      engineering: {
-        architectureSummary: 'Decoupled services (Gateway, Order Service, Restaurant Service, Delivery Tracking, Payment Service) communicating via RabbitMQ exchanges with dead-letter queue isolation.',
-        systemDiagram: `[ API Gateway (Auth & Routing) ]
-              │
-              ├──► [ Order Service ] ──► (Publishes: "order.created")
-              │                              │
-              ▼                              ▼
-      [ RabbitMQ Broker ] ◄──────────────────┘
-              │
-              ├──► [ Payment Service ] ──► (Consumes "order.created", processes with idempotency)
-              │                              │
-              │                              └──► (Publishes: "payment.settled" or "payment.failed")
-              │
-              └──► [ Delivery Tracking Service ] ──► (Assigns courier upon "payment.settled")`,
-        backendScope: 'Node.js, Go, RabbitMQ, PostgreSQL, Docker Compose.',
-        frontendScope: 'REST API endpoints consumed by web and mobile clients.',
-        apiAndData: {
-          apis: 'RESTful endpoints with JSON payloads and RabbitMQ event message contracts.',
-          database: 'Isolated PostgreSQL databases per microservice to maintain bounded contexts.',
-          authentication: 'Stateless JWT with RSA key pair verification across service boundaries.',
-          integrations: 'RabbitMQ message broker.',
-          deployment: 'Docker Compose orchestration.'
-        },
-        decisions: [
-          {
-            decision: 'Enforced database-per-service pattern.',
-            rationale: 'Prevents tight coupling between orders, payments, and delivery services, allowing independent schema migrations.',
-            tradeOff: 'Requires asynchronous message synchronization rather than simple SQL JOIN queries.'
-          },
-          {
-            decision: 'Enforced idempotency keys on payment endpoints.',
-            rationale: 'Guarantees zero duplicate charges even when consumers re-process duplicate messages from queues.',
-            tradeOff: 'Requires maintaining an idempotency state table in the payment database.'
-          }
-        ]
-      },
-      challenges: {
-        challenge: 'Distributed transaction rollbacks when an order was placed but payment authorization subsequently failed.',
-        investigation: 'Examined compensation patterns in distributed microservices literature, comparing Two-Phase Commit (2PC) with Saga orchestration.',
-        solution: 'Implemented a choreography-based Saga. If payment fails, a "payment.failed" event is published to RabbitMQ, prompting the Order Service to mark the order as canceled and release reserved inventory.',
-        tradeOffs: 'System exhibits eventual consistency rather than instantaneous ACID rollback.',
-        lessonsLearned: 'Sagas are significantly more scalable and resilient than distributed 2PC locks in high-volume e-commerce.'
-      },
-      outcome: {
-        verifiedCapabilities: [
-          'Demonstrated complete fault-tolerant order-to-delivery transaction lifecycle.',
-          'Sub-100ms message delivery between order creation and payment authorization.',
-          'Zero duplicate payments recorded during simulated consumer crash tests.',
-          'Modular Docker Compose environment for deterministic local cluster deployment.'
-        ],
-        metricsNote: 'Verified architectural prototype and test suites.'
-      },
-      visualEvidence: [
-        {
-          image: '/images/projects/foodflow-payment.png',
-          caption: 'FoodFlow microservices payment processing flow and event exchange topology.'
-        }
-      ],
-      nextSteps: {
-        liveUrl: null,
-        liveLabel: null,
-        githubUrl: null,
-        isPrivate: false,
-        confidentialityNotice: 'Educational and architectural microservices codebase.'
-      }
-    }
-  },
-
-  /* ==========================================================================
      11. DISEASE PREDICTION & MEDICAL AI (Machine Learning Advisory System)
      ========================================================================== */
   {
@@ -1571,107 +1464,6 @@ export const PROJECTS_DATA = [
         githubUrl: null,
         isPrivate: false,
         confidentialityNotice: 'Personal workflow automation tooling.'
-      }
-    }
-  },
-
-  /* ==========================================================================
-     13. BLOG PLATFORM BACKEND (High-Performance API & Clean Architecture)
-     ========================================================================== */
-  {
-    id: 'blog-backend',
-    name: 'Blog Platform Backend',
-    subtitle: 'High-Performance API & Clean Architecture in Go',
-    category: 'backend',
-    featured: false,
-    isPrivate: false,
-    image: null,
-    tech: ['Go (Golang)', 'Gin', 'REST APIs', 'Clean Architecture', 'SQL', 'Unit Testing'],
-    github: 'https://github.com/tamirat-dejene/blog-backend',
-    live: null,
-    liveLabel: null,
-    shortDesc: 'Designed and tested 30+ REST API endpoints in Go using Gin and Clean Architecture, incorporating full-text search indexing and unit test suites.',
-
-    caseStudy: {
-      overview: {
-        summary: 'A high-performance publishing and content management backend engineered in Go following Clean Architecture principles, powering article authoring, user engagement, and automated topic discovery.',
-        targetAudience: 'Digital publishing platforms and tech media outlets requiring sub-millisecond read paths for high-traffic articles alongside secure authoring APIs.',
-        problemAddressed: 'Publishing backends frequently suffer database deadlocks when concurrent users view and comment on viral articles while authors update drafts.'
-      },
-      contribution: {
-        verifiableRole: 'Backend Engineer (Eskalate LLC)',
-        personalScope: [
-          'Built 30+ REST endpoints in Go using the Gin framework.',
-          'Structured the system strictly into Clean Architecture layers (Delivery, Use Case, Repository, Domain).',
-          'Wrote unit tests utilizing Go interface mocking, achieving high test coverage.',
-          'Engineered database indexing strategies on slugs, categories, and published timestamps.'
-        ],
-        teamScope: 'Collaborated with squad engineers on database schema normalization and code reviews.'
-      },
-      engineering: {
-        architectureSummary: 'Domain-Driven Clean Architecture in Go. HTTP handlers receive requests, invoke use case business logic through interfaces, and persist data via repository interfaces, isolating business rules from SQL libraries.',
-        systemDiagram: `[ HTTP Requests (Gin Web Framework) ]
-                  │
-                  ▼
-[ Delivery Layer (Handlers & JWT Middleware) ]
-                  │
-                  ▼
-[ Use Case Layer (Business Logic & Validation) ]
-                  │
-                  ├──► [ Domain Interfaces ]
-                  │           │
-                  │           ▼
-                  └──► [ Repository Layer (PostgreSQL / SQLite) ]`,
-        backendScope: 'Go 1.21, Gin, Clean Architecture, SQL database drivers.',
-        frontendScope: 'REST API endpoints consumed by web publishing clients.',
-        apiAndData: {
-          apis: '30+ REST endpoints covering user authentication, article CRUD, tagging, comments, and analytics.',
-          database: 'Relational database schemas with indexed foreign keys and slug uniqueness constraints.',
-          authentication: 'JWT authentication with role validation (Author, Editor, Admin).',
-          integrations: 'Unit testing frameworks (Testify, Mockery).',
-          deployment: 'Containerized Go binary with minimal scratch Docker image.'
-        },
-        decisions: [
-          {
-            decision: 'Adopted Clean Architecture with interface-driven dependencies.',
-            rationale: 'Enabled testing every business rule in isolation using mocked database repositories without requiring a physical database instance in CI.',
-            tradeOff: 'Increases initial boilerplate code for interface definitions.'
-          },
-          {
-            decision: 'Implemented atomic SQL increment queries for article view counters.',
-            rationale: 'Avoids reading, incrementing in memory, and writing back, preventing lost update race conditions under high concurrent traffic.',
-            tradeOff: 'Database handles view increments directly.'
-          }
-        ]
-      },
-      challenges: {
-        challenge: 'Concurrent readers viewing viral articles caused write lock contention when incrementing view counters on the main article table row.',
-        investigation: 'Profiled database locks, discovering that row-level exclusive locks on the article table blocked read queries.',
-        solution: 'Decoupled view counting from the primary article entity by recording view events into an append-only analytics table, aggregated asynchronously.',
-        tradeOffs: 'View counts reflect eventual consistency rather than strictly synchronous real-time numbers.',
-        lessonsLearned: 'In high-read systems, separating mutable engagement counters from immutable article content eliminates read lock contention.'
-      },
-      outcome: {
-        verifiedCapabilities: [
-          'Engineered 30+ production-grade Go endpoints passing all automated QA test suites.',
-          'Sub-10ms response times on cached read endpoints.',
-          'Comprehensive unit test coverage across all domain use cases.',
-          'Public GitHub repository demonstrating Clean Architecture in Go.'
-        ],
-        metricsNote: 'Verified repository code; avoids unverified traffic metrics.'
-      },
-      visualEvidence: [
-        {
-          image: null,
-          caption: 'Clean Architecture Go repository with unit tests and Gin routing accessible on GitHub.'
-        }
-      ],
-      nextSteps: {
-        liveUrl: null,
-        liveLabel: null,
-        githubUrl: 'https://github.com/tamirat-dejene/blog-backend',
-        isPrivate: false,
-        confidentialityNotice: 'Public open-source repository on GitHub.'
       }
     }
   },

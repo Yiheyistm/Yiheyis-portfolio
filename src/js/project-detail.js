@@ -2,7 +2,7 @@ import '../css/styles.css';
 import { PROJECTS_DATA, getProjectById } from './projects-data.js';
 
 /**
- * Yiheyis Tamir Ayalew — Standalone Engineering Case Study Page Renderer
+ * Yiheyis Tamir Ayalew — Standalone Build Story Page Renderer
  * Renders complete, deep-dive 7-point case studies for both featured and secondary projects.
  * Supports deep linking, dynamic OpenGraph/SEO metadata, image lightbox, and cross-project navigation.
  */
@@ -36,7 +36,7 @@ function initCaseStudyPage() {
   // Update Page Title and SEO Meta Tags dynamically
   updatePageMetadata(project);
 
-  // Render the case study content
+  // Render the build story content
   renderCaseStudy(project);
 
   // Initialize Theme Switcher
@@ -56,10 +56,10 @@ function initCaseStudyPage() {
 }
 
 function updatePageMetadata(project) {
-  const pageTitle = `${project.name} — Engineering Case Study | Yiheyis Tamir Ayalew`;
+  const pageTitle = `${project.name} — Build story | Yiheyis Tamir Ayalew`;
   document.title = pageTitle;
 
-  const desc = `${project.subtitle}. Technical case study covering architecture, personal engineering contributions, technical challenges, and verified outcomes.`;
+  const desc = `${project.subtitle}. How this product was built: the problem, my engineering contribution, key decisions, and outcomes.`;
 
   setMetaTag('description', desc);
   setMetaTag('og:title', pageTitle, true);
@@ -70,6 +70,16 @@ function updatePageMetadata(project) {
   }
   setMetaTag('twitter:title', pageTitle);
   setMetaTag('twitter:description', desc);
+
+  // Canonical URL (per project, stable form)
+  const canonicalUrl = `https://www.yiheyis-tamir.tech/project-detail?id=${project.id}`;
+  let canonicalLink = document.querySelector('link[rel="canonical"]');
+  if (!canonicalLink) {
+    canonicalLink = document.createElement('link');
+    canonicalLink.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonicalLink);
+  }
+  canonicalLink.setAttribute('href', canonicalUrl);
 }
 
 function setMetaTag(name, content, isProperty = false) {
@@ -316,6 +326,10 @@ function renderCaseStudy(project) {
     </div>
   ` : '';
 
+  // Flagships keep the full build story; every other project renders in a compact
+  // simple mode: Overview + Contribution + Screenshots only.
+  const isFlagship = ['bayment', 'seri-lms', 'fitawrari'].includes(project.id);
+
   // Quick Switcher dropdown options
   const switcherOptions = PROJECTS_DATA.map(p => `
     <option value="${p.id}" ${p.id === project.id ? 'selected' : ''}>${p.featured ? '★ ' : ''}${p.name} (${p.category.toUpperCase()})</option>
@@ -336,7 +350,7 @@ function renderCaseStudy(project) {
 
   container.innerHTML = `
     <!-- Top Breadcrumb & Quick Switcher -->
-    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;">
       <nav class="cs-breadcrumb" aria-label="Breadcrumb">
         <a href="index.html">Home</a>
         <span class="separator">/</span>
@@ -346,8 +360,8 @@ function renderCaseStudy(project) {
       </nav>
 
       <div class="cs-selector-dropdown">
-        <label for="project-switcher" class="sr-only">Switch Case Study</label>
-        <select id="project-switcher" class="cs-selector-select" aria-label="Switch project case study">
+        <label for="project-switcher" class="sr-only">Switch Build Story</label>
+        <select id="project-switcher" class="cs-selector-select" aria-label="Switch project build story">
           ${switcherOptions}
         </select>
       </div>
@@ -423,7 +437,8 @@ function renderCaseStudy(project) {
       </div>
     </section>
 
-    <!-- Section 3: Engineering & Architecture -->
+    <!-- Section 3: Engineering & Architecture (flagships only) -->
+    ${isFlagship ? `
     <section class="cs-section" id="engineering">
       <div class="cs-section-header">
         <span class="cs-section-num">03</span>
@@ -456,7 +471,7 @@ function renderCaseStudy(project) {
       </div>
     </section>
 
-    <!-- Section 4: Challenges & Solutions -->
+    <!-- Section 4: Challenges & Solutions (flagships only) -->
     <section class="cs-section" id="challenges">
       <div class="cs-section-header">
         <span class="cs-section-num">04</span>
@@ -471,7 +486,7 @@ function renderCaseStudy(project) {
       </div>
     </section>
 
-    <!-- Section 5: Verified Outcomes -->
+    <!-- Section 5: Verified Outcomes (flagships only) -->
     <section class="cs-section" id="outcomes">
       <div class="cs-section-header">
         <span class="cs-section-num">05</span>
@@ -484,22 +499,26 @@ function renderCaseStudy(project) {
         * ${outcome.metricsNote || 'Verified engineering deliverables; strictly avoids fabricated metrics or unverified financial figures.'}
       </p>
     </section>
+    ` : ''}
 
-    <!-- Section 6: Visual Evidence & Interactive Walkthrough -->
+    <!-- Screenshots & Walkthrough -->
     <section class="cs-section" id="evidence">
       <div class="cs-section-header">
-        <span class="cs-section-num">06</span>
-        <h2 class="cs-section-title">Visual Evidence &amp; System Walkthrough</h2>
+        <span class="cs-section-num">${isFlagship ? '06' : '03'}</span>
+        <h2 class="cs-section-title">${isFlagship ? 'Visual Evidence &amp; System Walkthrough' : 'Screenshots'}</h2>
       </div>
+      ${isFlagship ? `
       <div class="cs-text-block">
         <p>Real application screenshots and architectural interfaces captured from verified builds. Click any screenshot to inspect in full resolution.</p>
       </div>
+      ` : ''}
 
       ${interactiveSimHtml}
       ${galleryHtml}
     </section>
 
-    <!-- Section 7: Confidentiality & Next Steps -->
+    <!-- Section 7: Confidentiality & Next Steps (flagships only) -->
+    ${isFlagship ? `
     <section class="cs-section" id="confidentiality">
       <div class="cs-section-header">
         <span class="cs-section-num">07</span>
@@ -512,30 +531,32 @@ function renderCaseStudy(project) {
         ${actionButtons.join('')}
       </div>
     </section>
+    ` : ''}
 
     <!-- Project Navigation Bar (Previous / Next) -->
     <nav class="cs-nav-bar" aria-label="Adjacent Projects">
       <a href="project-detail.html?id=${prevProject.id}" class="cs-nav-card prev">
-        <span class="cs-nav-label">← Previous Case Study</span>
+        <span class="cs-nav-label">← Previous Build Story</span>
         <span class="cs-nav-title">${prevProject.name}</span>
       </a>
       <a href="project-detail.html?id=${nextProject.id}" class="cs-nav-card next">
-        <span class="cs-nav-label">Next Case Study →</span>
+        <span class="cs-nav-label">Next Build Story →</span>
         <span class="cs-nav-title">${nextProject.name}</span>
       </a>
     </nav>
 
-    <!-- More Engineering Case Studies Section -->
+    <!-- More Build Stories (flagships only — simple modes rely on prev/next nav) -->
+    ${isFlagship ? `
     <section class="cs-more-section">
       <div class="cs-more-header">
-        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-pure); margin: 0;">Explore All 15 Engineering Case Studies</h3>
-        <a href="index.html#projects" class="btn btn-ghost btn-sm" style="font-size: 13px; padding-left: 0;">View on Main Portfolio →</a>
+        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-pure); margin: 0;">Other Build Stories</h3>
+        <a href="index.html#work" class="btn btn-ghost btn-sm" style="font-size: 13px; padding-left: 0;">View on main portfolio →</a>
       </div>
-      <p style="color: var(--text-secondary); font-size: 0.95rem;">Review deep-dive technical breakdowns across FinTech, AI/RAG, Go microservices, and mobile platforms.</p>
       <div class="cs-more-grid">
         ${otherGridHtml}
       </div>
     </section>
+    ` : ''}
   `;
 
   // Attach project switcher listener

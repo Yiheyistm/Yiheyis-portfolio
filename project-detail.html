@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engineering Case Study | Yiheyis Tamir Ayalew</title>
-  <meta name="description" content="In-depth software engineering case study covering system architecture, technical decisions, personal contributions, and verified results.">
+  <title>Build story | Yiheyis Tamir Ayalew</title>
+  <meta name="description" content="How the product was built: the problem, engineering contribution, key decisions, and outcomes.">
   <meta name="author" content="Yiheyis Tamir Ayalew">
 
   <!-- OpenGraph Metadata (dynamically updated) -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Engineering Case Study | Yiheyis Tamir Ayalew">
-  <meta property="og:description" content="In-depth software engineering case study covering system architecture, technical decisions, personal contributions, and verified results.">
+  <meta property="og:title" content="Build story | Yiheyis Tamir Ayalew">
+  <meta property="og:description" content="How the product was built: the problem, engineering contribution, key decisions, and outcomes.">
   <meta property="og:site_name" content="Yiheyis Tamir Ayalew — Software Engineer Portfolio">
 
   <!-- Twitter Card Metadata -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Engineering Case Study | Yiheyis Tamir Ayalew">
-  <meta name="twitter:description" content="In-depth software engineering case study covering system architecture, technical decisions, personal contributions, and verified results.">
+  <meta name="twitter:title" content="Build story | Yiheyis Tamir Ayalew">
+  <meta name="twitter:description" content="How the product was built: the problem, engineering contribution, key decisions, and outcomes.">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -24,13 +24,14 @@
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Theme & Progressive Enhancement Bootstrap -->
   <script>
     document.documentElement.classList.add('js');
     (function() {
       try {
-        const saved = localStorage.getItem('portfolio-theme');
+        const urlTheme = new URLSearchParams(window.location.search).get('theme');
+        const saved = (urlTheme === 'light' || urlTheme === 'dark') ? urlTheme : localStorage.getItem('portfolio-theme');
         const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         const theme = saved ? saved : (prefersDark ? 'dark' : 'dark');
         document.documentElement.setAttribute('data-theme', theme);
@@ -83,13 +84,13 @@
     </div>
   </header>
 
-  <!-- Main Case Study Content Shell -->
+  <!-- Main Build Story Content Shell -->
   <main class="cs-page-wrapper">
     <div class="cs-container" id="case-study-root">
       <!-- Loading Skeleton Placeholder -->
       <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh; gap: 16px;">
         <div class="quantum-spinner" style="width: 36px; height: 36px; border: 3px solid var(--accent-dim); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite;"></div>
-        <p style="font-family: var(--font-mono); font-size: 14px; color: var(--text-tertiary);">Loading engineering case study...</p>
+        <p style="font-family: var(--font-mono); font-size: 14px; color: var(--text-tertiary);">Loading build story...</p>
       </div>
     </div>
   </main>
@@ -115,7 +116,7 @@
     </div>
     <div class="footer-bottom container">
       <p class="copyright">
-        &copy; <span id="footer-year">2026</span> Yiheyis Tamir Ayalew. Verified engineering portfolio.
+        &copy; <span id="footer-year">2026</span> Yiheyis Tamir Ayalew.
       </p>
     </div>
   </footer>
