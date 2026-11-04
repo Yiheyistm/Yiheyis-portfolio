@@ -78,6 +78,7 @@ function updatePageMetadata(project) {
   setMetaTag('og:url', window.location.href, true);
   if (project.image) {
     setMetaTag('og:image', window.location.origin + project.image, true);
+    setMetaTag('twitter:image', window.location.origin + project.image, true);
   }
   setMetaTag('twitter:title', pageTitle);
   setMetaTag('twitter:description', desc);

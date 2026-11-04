@@ -31,7 +31,7 @@ export const PROJECTS_DATA = [
         caption: 'Security preferences and identity verification (KYC) settings screen with biometrics and PIN authorization.'
       },
       {
-        url: '/images/projects/bayment-cards.png',
+        url: '/images/projects/bayment-cards.webp',
         caption: 'Multi-card carousel showcasing active and frozen virtual card tiers.'
       }
     ],
@@ -281,10 +281,10 @@ export const PROJECTS_DATA = [
     category: 'fullstack',
     featured: false,
     isPrivate: true,
-    image: '/images/projects/taxi_map.png',
+    image: '/images/projects/taxi_map.webp',
     gallery: [
       {
-        url: '/images/projects/taxi_map.png',
+        url: '/images/projects/taxi_map.webp',
         caption: 'Transit map telemetry interface displaying live vehicle GPS breadcrumbs and route corridor in Addis Ababa.'
       },
       {
@@ -305,7 +305,6 @@ export const PROJECTS_DATA = [
       }
     ],
     tech: ['Go (Golang)', 'RabbitMQ', 'TimescaleDB', 'PostgreSQL', 'Docker', 'Flutter', 'Redis'],
-    github: 'https://github.com/taxi-fare-payment-system',
     live: null,
     liveLabel: null,
     shortDesc: 'Architected a distributed transit backend in Go using RabbitMQ event queues and TimescaleDB, paired with a Flutter driver app for real-time fare calculations and wallet settlements.',
@@ -392,7 +391,7 @@ export const PROJECTS_DATA = [
       },
       visualEvidence: [
         {
-          image: '/images/projects/taxi_map.png',
+          image: '/images/projects/taxi_map.webp',
           caption: 'Real-time vehicle map tracking interface displaying route corridor in Addis Ababa.'
         },
         {
@@ -407,9 +406,9 @@ export const PROJECTS_DATA = [
       nextSteps: {
         liveUrl: null,
         liveLabel: null,
-        githubUrl: 'https://github.com/taxi-fare-payment-system',
-        isPrivate: false,
-        confidentialityNotice: 'Public open-source repository organization showcasing distributed transit architecture.'
+        githubUrl: null,
+        isPrivate: true,
+        confidentialityNotice: "Proprietary work — architecture details shared under NDA. Reach out directly for a walkthrough."
       }
     }
   },
@@ -424,18 +423,18 @@ export const PROJECTS_DATA = [
     category: 'mobile',
     featured: true,
     isPrivate: true,
-    image: '/images/projects/fitawrari_home.png',
+    image: '/images/projects/fitawrari_home.webp',
     gallery: [
       {
-        url: '/images/projects/fitawrari_home.png',
+        url: '/images/projects/fitawrari_home.webp',
         caption: 'Fitawrari mobile-first car discovery interface with make/model filters, price ranges in ETB, and responsive vehicle cards.'
       },
       {
-        url: '/images/projects/fitwarari_inventory.png',
+        url: '/images/projects/fitwarari_inventory.webp',
         caption: 'Dealership inventory management view displaying vehicle specifications, verification badges, and direct call/WhatsApp triggers.'
       },
       {
-        url: '/images/projects/fitawrari-desktop.png',
+        url: '/images/projects/fitawrari-desktop.webp',
         caption: 'Desktop expanded view showing high-resolution vehicle galleries and financing calculator.'
       },
       {
@@ -526,11 +525,11 @@ export const PROJECTS_DATA = [
       },
       visualEvidence: [
         {
-          image: '/images/projects/fitawrari_home.png',
+          image: '/images/projects/fitawrari_home.webp',
           caption: 'Mobile marketplace home screen with search facets and Ethiopian Birr vehicle pricing.'
         },
         {
-          image: '/images/projects/fitwarari_inventory.png',
+          image: '/images/projects/fitwarari_inventory.webp',
           caption: 'Dealership inventory view showing vehicle specifications and direct contact triggers.'
         }
       ],
@@ -676,7 +675,7 @@ export const PROJECTS_DATA = [
         caption: 'Package selection catalog with transparent pricing in Ethiopian Birr (ETB) and package metrics.'
       },
       {
-        url: '/images/projects/tapela_promotion_landing.png',
+        url: '/images/projects/tapela_promotion_landing.webp',
         caption: 'Tapela Promotion platform live at tapela-promotion.onrender.com featuring Telegram and social marketing bundles.'
       },
       {
@@ -684,7 +683,7 @@ export const PROJECTS_DATA = [
         caption: 'Tapela promotion package selection with automated order configuration.'
       },
       {
-        url: '/images/projects/tapela_promo_testmony.png',
+        url: '/images/projects/tapela_promo_testmony.webp',
         caption: 'Client testimonials and verification workflow for Ethiopian bank transfer receipts.'
       }
     ],
@@ -779,7 +778,7 @@ export const PROJECTS_DATA = [
           caption: 'Production landing page for Social Gebeya at socialgebeya.com with package pricing.'
         },
         {
-          image: '/images/projects/tapela_promotion_landing.png',
+          image: '/images/projects/tapela_promotion_landing.webp',
           caption: 'Tapela promotion platform live on Render with active promotional bundles.'
         },
         {
@@ -809,30 +808,30 @@ export const PROJECTS_DATA = [
     category: 'fullstack',
     featured: false,
     isPrivate: false,
-    image: '/images/projects/deshet_stream_hero_movie.png',
+    image: '/images/projects/deshet_stream_hero_movie.webp',
     gallery: [
       {
-        url: '/images/projects/deshet_stream_hero_movie.png',
+        url: '/images/projects/deshet_stream_hero_movie.webp',
         caption: 'Cinematic hero movie banner with high-resolution backdrop, age rating, IMDb score, and quick action buttons.'
       },
       {
-        url: '/images/projects/deshet_stream_trending_section.png',
+        url: '/images/projects/deshet_stream_trending_section.webp',
         caption: 'Trending movies and TV series carousels with responsive poster art and rating pills.'
       },
       {
-        url: '/images/projects/deshet_stream_detail_section_1.png',
+        url: '/images/projects/deshet_stream_detail_section_1.webp',
         caption: 'Movie detail view showing synopsis, director, release year, runtime, and cast photography.'
       },
       {
-        url: '/images/projects/deshet_stream_play_movies.png',
+        url: '/images/projects/deshet_stream_play_movies.webp',
         caption: 'Embedded movie player interface with multi-server switcher and theater mode.'
       },
       {
-        url: '/images/projects/deshet_stream_paly_tv_show.png',
+        url: '/images/projects/deshet_stream_paly_tv_show.webp',
         caption: 'TV series player interface with season and episode selector drawers.'
       },
       {
-        url: '/images/projects/deshet_stream_cast_biography.png',
+        url: '/images/projects/deshet_stream_cast_biography.webp',
         caption: 'Actor biography and filmography discovery drawer.'
       }
     ],
@@ -919,15 +918,15 @@ export const PROJECTS_DATA = [
       },
       visualEvidence: [
         {
-          image: '/images/projects/deshet_stream_hero_movie.png',
+          image: '/images/projects/deshet_stream_hero_movie.webp',
           caption: 'Cinematic hero movie banner with backdrop, age rating, and IMDb score.'
         },
         {
-          image: '/images/projects/deshet_stream_trending_section.png',
+          image: '/images/projects/deshet_stream_trending_section.webp',
           caption: 'Trending movies and TV series responsive carousels.'
         },
         {
-          image: '/images/projects/deshet_stream_play_movies.png',
+          image: '/images/projects/deshet_stream_play_movies.webp',
           caption: 'Movie playback screen with multi-server switcher.'
         }
       ],
@@ -951,10 +950,10 @@ export const PROJECTS_DATA = [
     category: 'backend',
     featured: true,
     isPrivate: true,
-    image: '/images/projects/seri_lms_1.png',
+    image: '/images/projects/seri_lms_1.webp',
     gallery: [
       {
-        url: '/images/projects/seri_lms_1.png',
+        url: '/images/projects/seri_lms_1.webp',
         caption: 'Seri LMS landing page with localized course delivery, ETB payment methods (Chapa & bank transfer), and QR credential verification.'
       },
       {
@@ -974,7 +973,7 @@ export const PROJECTS_DATA = [
         caption: 'Interactive HTML learning lab environment featuring active syllabus tracking, interactive activities, and lecture notes.'
       },
       {
-        url: '/images/projects/seri_lms_3.png',
+        url: '/images/projects/seri_lms_3.webp',
         caption: 'Curated course catalog grid displaying difficulty badges (Beginner, Intermediate, Advanced), ETB pricing, and instructor profiles.'
       },
       {
@@ -1074,7 +1073,7 @@ export const PROJECTS_DATA = [
       },
       visualEvidence: [
         {
-          image: '/images/projects/seri_lms_1.png',
+          image: '/images/projects/seri_lms_1.webp',
           caption: 'Seri LMS landing portal showcasing localized course delivery in Amharic and English with Chapa payments.'
         },
         {
@@ -1114,14 +1113,14 @@ export const PROJECTS_DATA = [
     category: 'fullstack',
     featured: false,
     isPrivate: true,
-    image: '/images/projects/seri_award.png',
+    image: '/images/projects/seri_award.webp',
     gallery: [
       {
-        url: '/images/projects/seri_award.png',
+        url: '/images/projects/seri_award.webp',
         caption: 'Official Seri 2019 E.C. Grand Awards live gala stage and secure online voting landing interface.'
       },
       {
-        url: '/images/projects/seri_award_1.png',
+        url: '/images/projects/seri_award_1.webp',
         caption: 'Event timeline and nominee discovery roadmap from voting opening to audit, tally, and sealed ballots.'
       },
       {
@@ -1210,11 +1209,11 @@ export const PROJECTS_DATA = [
       },
       visualEvidence: [
         {
-          image: '/images/projects/seri_award.png',
+          image: '/images/projects/seri_award.webp',
           caption: 'Seri Grand Awards official voting platform hero interface and live ceremony gateway.'
         },
         {
-          image: '/images/projects/seri_award_1.png',
+          image: '/images/projects/seri_award_1.webp',
           caption: 'Election lifecycle roadmap detailing voting windows, ballot auditing, and results sealing.'
         },
         {
@@ -1246,10 +1245,10 @@ export const PROJECTS_DATA = [
     category: 'ai',
     featured: false,
     isPrivate: false,
-    image: '/images/projects/disease-prediction.png',
+    image: '/images/projects/disease-prediction.webp',
     gallery: [
       {
-        url: '/images/projects/disease-prediction.png',
+        url: '/images/projects/disease-prediction.webp',
         caption: 'Disease prediction machine learning advisory system dashboard with symptom selector.'
       },
       {
@@ -1339,7 +1338,7 @@ export const PROJECTS_DATA = [
       },
       visualEvidence: [
         {
-          image: '/images/projects/disease-prediction.png',
+          image: '/images/projects/disease-prediction.webp',
           caption: 'Interactive symptom selector and patient input portal.'
         },
         {
