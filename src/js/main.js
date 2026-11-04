@@ -366,6 +366,7 @@ const MORE_BUILD_IDS = [
 const CATEGORY_LABELS = {
   ai: 'AI',
   backend: 'Backend',
+  fullstack: 'Full-stack',
   mobile: 'Mobile',
   web: 'Web',
   other: 'Hardware'

@@ -23,6 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initCaseStudyPage();
 });
 
+// Human-readable category labels (shared by switcher, badges, and hero meta)
+const CATEGORY_LABELS = {
+  ai: 'AI',
+  backend: 'Backend',
+  fullstack: 'Full-stack',
+  mobile: 'Mobile',
+  web: 'Web',
+  other: 'Hardware'
+};
+const categoryLabel = (p) => CATEGORY_LABELS[p.category] || p.category.toUpperCase();
+
 function initCaseStudyPage() {
   const urlParams = new URLSearchParams(window.location.search);
   const requestedId = urlParams.get('id');
@@ -332,7 +343,7 @@ function renderCaseStudy(project) {
 
   // Quick Switcher dropdown options
   const switcherOptions = PROJECTS_DATA.map(p => `
-    <option value="${p.id}" ${p.id === project.id ? 'selected' : ''}>${p.featured ? '★ ' : ''}${p.name} (${p.category.toUpperCase()})</option>
+    <option value="${p.id}" ${p.id === project.id ? 'selected' : ''}>${p.featured ? '★ ' : ''}${p.name} (${categoryLabel(p)})</option>
   `).join('');
 
   // Other Case Studies grid
@@ -340,7 +351,7 @@ function renderCaseStudy(project) {
   const otherGridHtml = otherProjects.map(p => `
     <a href="project-detail.html?id=${p.id}" class="cs-more-card">
       <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span class="cs-category-badge" style="font-size: 10px; padding: 2px 8px;">${p.category.toUpperCase()}</span>
+        <span class="cs-category-badge" style="font-size: 10px; padding: 2px 8px;">${categoryLabel(p)}</span>
         ${p.isPrivate ? `<span style="font-size: 11px; color: var(--text-tertiary);">${ICONS.lock}</span>` : ''}
       </div>
       <div class="cs-more-title">${p.name}</div>
@@ -370,7 +381,7 @@ function renderCaseStudy(project) {
     <!-- Hero Header -->
     <header class="cs-hero">
       <div class="cs-header-meta">
-        <span class="cs-category-badge">${project.category.toUpperCase()}</span>
+        <span class="cs-category-badge">${categoryLabel(project)}</span>
         <span class="cs-role-badge">Role: ${contribution.verifiableRole || 'Software Engineer'}</span>
         ${project.isPrivate ? `<span class="badge badge-private">${ICONS.lock} Private Project</span>` : `<span class="badge" style="background: rgba(180, 244, 97, 0.12); color: var(--accent);">Open Source</span>`}
       </div>

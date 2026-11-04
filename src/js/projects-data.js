@@ -278,7 +278,7 @@ export const PROJECTS_DATA = [
     id: 'taxi-fare',
     name: 'Taxi Fare Payment System',
     subtitle: 'Event-Driven Transit Microservices Platform',
-    category: 'backend',
+    category: 'fullstack',
     featured: false,
     isPrivate: true,
     image: '/images/projects/taxi_map.png',
@@ -663,11 +663,10 @@ export const PROJECTS_DATA = [
     id: 'social-gebeya',
     name: 'Social Gebeya & Tapela',
     subtitle: 'Ethiopian Social Engagement Marketplace & Promotion',
-    category: 'backend',
+    category: 'fullstack',
     featured: false,
-    isPrivate: false,
-    image: '/images/projects/social_gebeya_landing.png',
-    gallery: [
+    isPrivate: true,
+    image: '/images/projects/social_gebeya_landing.png',    gallery: [
       {
         url: '/images/projects/social_gebeya_landing.png',
         caption: 'Social Gebeya production landing page at socialgebeya.com showing engagement packages and Ethiopian payment options.'
@@ -690,7 +689,6 @@ export const PROJECTS_DATA = [
       }
     ],
     tech: ['React', 'Node.js', 'Express BFF', 'JWT Phone Auth', 'CBE & Telebirr', 'Amharic i18n', 'CSS3'],
-    github: 'https://github.com/Yiheyistm/Social_Gebeya',
     live: 'https://socialgebeya.com/',
     liveLabel: 'Live at socialgebeya.com',
     liveShortLabel: 'Social Gebeya',
@@ -808,7 +806,7 @@ export const PROJECTS_DATA = [
     id: 'deshet-stream',
     name: 'Deshet Stream',
     subtitle: 'Cinematic Movie & TV Discovery Platform',
-    category: 'backend',
+    category: 'fullstack',
     featured: false,
     isPrivate: false,
     image: '/images/projects/deshet_stream_hero_movie.png',
@@ -1113,9 +1111,9 @@ export const PROJECTS_DATA = [
     id: 'seri-vote',
     name: 'Seri Vote / Seri Award',
     subtitle: 'Cryptographic Online Voting & Award Platform',
-    category: 'backend',
+    category: 'fullstack',
     featured: false,
-    isPrivate: false,
+    isPrivate: true,
     image: '/images/projects/seri_award.png',
     gallery: [
       {
