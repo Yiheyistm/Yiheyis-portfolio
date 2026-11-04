@@ -350,7 +350,7 @@ function renderCaseStudy(project) {
   // Other Case Studies grid
   const otherProjects = PROJECTS_DATA.filter(p => p.id !== project.id);
   const otherGridHtml = otherProjects.map(p => `
-    <a href="project-detail.html?id=${p.id}" class="cs-more-card">
+    <a href="project-detail?id=${p.id}" class="cs-more-card">
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <span class="cs-category-badge" style="font-size: 10px; padding: 2px 8px;">${categoryLabel(p)}</span>
         ${p.isPrivate ? `<span style="font-size: 11px; color: var(--text-tertiary);">${ICONS.lock}</span>` : ''}
@@ -547,11 +547,11 @@ function renderCaseStudy(project) {
 
     <!-- Project Navigation Bar (Previous / Next) -->
     <nav class="cs-nav-bar" aria-label="Adjacent Projects">
-      <a href="project-detail.html?id=${prevProject.id}" class="cs-nav-card prev">
+      <a href="project-detail?id=${prevProject.id}" class="cs-nav-card prev">
         <span class="cs-nav-label">← Previous Build Story</span>
         <span class="cs-nav-title">${prevProject.name}</span>
       </a>
-      <a href="project-detail.html?id=${nextProject.id}" class="cs-nav-card next">
+      <a href="project-detail?id=${nextProject.id}" class="cs-nav-card next">
         <span class="cs-nav-label">Next Build Story →</span>
         <span class="cs-nav-title">${nextProject.name}</span>
       </a>
@@ -575,7 +575,7 @@ function renderCaseStudy(project) {
   const switcher = document.getElementById('project-switcher');
   if (switcher) {
     switcher.addEventListener('change', (e) => {
-      window.location.href = `project-detail.html?id=${e.target.value}`;
+      window.location.href = `project-detail?id=${e.target.value}`;
     });
   }
 

@@ -386,7 +386,7 @@ function initProjects() {
     const category = CATEGORY_LABELS[p.category] ||
       (p.category ? p.category.charAt(0).toUpperCase() + p.category.slice(1) : '');
     return `
-    <a class="mb-card" href="project-detail.html?id=${p.id}">
+    <a class="mb-card" href="project-detail?id=${p.id}">
       <div class="mb-card-top">
         <span class="mb-card-cat">${category}</span>
         ${p.isPrivate ? '<span class="mb-card-lock" title="Private project">🔒</span>' : ''}
